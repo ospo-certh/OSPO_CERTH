@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-eaeace6ea162e7486688d6f4f67fe071.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-83c8fbbc3642f6b79dd6957aee1e8517.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
 <style>
 /* Hide the language toggle before JS sets the correct label to prevent flash */
 .navbar-nav.ms-auto .nav-item:not(.compact) { visibility: hidden; }
@@ -102,6 +105,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="../../docs/index.html" aria-current="page"> 
 <span class="menu-text">Technical Documentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -274,7 +281,10 @@ ul.task-list li input[type="checkbox"] {
 (function () {
   // Runs synchronously at end of <body> — DOM is fully available, no DOMContentLoaded needed.
   var path = window.location.pathname;
-  var isGR = path.indexOf('/docs-gr/') !== -1 || path.indexOf('index-gr') !== -1;
+
+  // Convention: no suffix = GR (default), -en suffix = EN, /docs/ = EN, /docs-gr/ = GR
+  var isEN = path.indexOf('/docs/') !== -1 || path.indexOf('index-en') !== -1 || path.indexOf('contact-en') !== -1;
+  var isGR = !isEN;
 
   // ── Equivalent page in the other language ─────────────────────────────────
   var otherHref;
@@ -282,11 +292,15 @@ ul.task-list li input[type="checkbox"] {
     otherHref = path.replace('/docs-gr/', '/docs/');
   } else if (path.indexOf('/docs/') !== -1) {
     otherHref = path.replace('/docs/', '/docs-gr/');
-  } else if (path.indexOf('index-gr.html') !== -1) {
-    otherHref = path.replace('index-gr.html', 'index.html');
+  } else if (path.indexOf('contact-en.html') !== -1) {
+    otherHref = path.replace('contact-en.html', 'contact.html');
+  } else if (path.indexOf('contact.html') !== -1) {
+    otherHref = path.replace('contact.html', 'contact-en.html');
+  } else if (path.indexOf('index-en.html') !== -1) {
+    otherHref = path.replace('index-en.html', 'index.html');
   } else {
     var dir = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
-    otherHref = dir + 'index-gr.html';
+    otherHref = dir + 'index-en.html';
   }
 
   // ── Site base path ────────────────────────────────────────────────────────
@@ -294,21 +308,37 @@ ul.task-list li input[type="checkbox"] {
   var base = m ? m[1] + '/' : (path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1));
 
   var targets = {
-    home: { en: base + 'index.html',      gr: base + 'index-gr.html' },
-    docs: { en: base + 'docs/index.html', gr: base + 'docs-gr/index.html' }
+    home:    { gr: base + 'index.html',      en: base + 'index-en.html' },
+    docs:    { gr: base + 'docs-gr/index.html', en: base + 'docs/index.html' },
+    contact: { gr: base + 'contact.html',    en: base + 'contact-en.html' }
   };
+
+  // ── Rewrite brand/title link (always hardcoded to EN by Quarto) ──────────
+  var brandLink = document.querySelector('a.navbar-brand');
+  if (brandLink) {
+    brandLink.href = isGR ? targets.home.gr : targets.home.en;
+    var brandTitle = brandLink.querySelector('.navbar-title');
+    if (brandTitle) brandTitle.textContent = isGR
+      ? 'Γραφείο Λογισμικού Ανοιχτού Κώδικα | ΕΚΕΤΑ'
+      : 'Open Source Program Office | CERTH';
+  }
 
   // ── Update every relevant navbar link ─────────────────────────────────────
   var homeLink = null;
   var docsLink = null;
+  var contactLink = null;
   document.querySelectorAll('.navbar-nav a.nav-link').forEach(function (a) {
     var span = a.querySelector('.menu-text');
     if (!span) return;
     var text = span.textContent.trim();
 
     if (text === 'EN' || text === 'GR') {
-      // Show the TARGET language (where the button will take you)
-      span.textContent = isGR ? 'EN' : 'GR';
+      var activeStyle = 'font-weight:bold;text-decoration:underline;';
+      var inactiveStyle = 'opacity:0.5;';
+      span.innerHTML =
+        '<span style="' + (isGR ? activeStyle : inactiveStyle) + '">GR</span>' +
+        '<span style="margin:0 4px">|</span>' +
+        '<span style="' + (isGR ? inactiveStyle : activeStyle) + '">EN</span>';
       a.href = otherHref;
       // Reveal toggle — was hidden by lang-init.html to suppress flash
       var item = a.closest('.nav-item');
@@ -321,11 +351,16 @@ ul.task-list li input[type="checkbox"] {
       a.href = isGR ? targets.docs.gr : targets.docs.en;
       span.textContent = isGR ? 'Τεχνική Τεκμηρίωση' : 'Technical Documentation';
       docsLink = a;
+    } else if (text === 'Contact' || text === 'Επικοινωνία') {
+      a.href = isGR ? targets.contact.gr : targets.contact.en;
+      span.textContent = isGR ? 'Επικοινωνία' : 'Contact';
+      contactLink = a;
     }
   });
 
   // ── Fix navbar active state after rewriting hrefs ─────────────────────────
-  var onDocs = path.indexOf('/docs-gr/') !== -1 || path.indexOf('/docs/') !== -1;
+  var onDocs    = path.indexOf('/docs-gr/') !== -1 || path.indexOf('/docs/') !== -1;
+  var onContact = path.indexOf('contact') !== -1;
 
   function setActive(link, active) {
     if (!link) return;
@@ -338,8 +373,9 @@ ul.task-list li input[type="checkbox"] {
     }
   }
 
-  setActive(homeLink, !onDocs);
-  setActive(docsLink, onDocs);
+  setActive(homeLink,    !onDocs && !onContact);
+  setActive(docsLink,    onDocs);
+  setActive(contactLink, onContact);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
