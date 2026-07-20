@@ -360,11 +360,18 @@
     "text": "Have a question about open source at CERTH, licensing, or how the OSPO can help your work? We would be happy to hear from you.\nSend us an email at ospo@tbd.gr."
   },
   {
-    "objectID": "index-en.html",
-    "href": "index-en.html",
+    "objectID": "index-en.html#our-activities",
+    "href": "index-en.html#our-activities",
     "title": "Open Source Program Office | CERTH",
-    "section": "",
-    "text": "Open Source Program Office | CERTH\nOpen source is inextricably linked to the development of modern technologies and constitutes the foundation of the vast majority of codebases across all industrial sectors and technological domains, such as Artificial Intelligence (AI), Big Data Management, Cloud Computing, and Cybersecurity. Almost all organizations depend on technology created by the open-source community. Characteristically, the Linux operating system and its various distributions power all of the world’s supercomputers (based on the top-500 list), while nearly all advancements in the field of Artificial Intelligence rely on popular open-source software platforms such as PyTorch, TensorFlow, and Jupyter. Concurrently, the increasing acquisition and technical support costs of commercial software solutions and services, combined with the criticality of digital sovereignty, render open-source technologies a fundamental component of independent research and development in the contemporary era.\n\n\nRole of an Open Source Programs Office (OSPO)\nAn OSPO operates as a central interface for open-source-related activities throughout an organization, consolidating the requisite expertise from diverse perspectives (including legal, financial, technical, and community standpoints). The OSPO is an established practice in numerous corporations (such as Microsoft and Google), public entities (such as the Government of France), and intergovernmental organizations (such as the WHO and CERN). It functions as the center of competency for an organization’s open-source operations and structure, and it is responsible for defining and implementing the strategies and policies that guide these endeavors.\n\n\nActivities of the Open Source Software Office at CERTH\nThe Open Source Programs Office (OSPO) at CERTH serves as an entry point to CERTH’s open-source expertise. The CERTH OSPO is an open and inclusive service, operating collaboratively with all Institutes, and serving externally as a visible interface for potential partners and the interested public. This encompasses events, communication, support, and training throughout the year.\nInternally, the CERTH OSPO has the following roles:\n\nTo advise, guide, and train CERTH staff regarding best practices, tools, licensing, developments, etc., for Open Source projects.\nTo provide recommendations for the release of software developed at CERTH as open-source projects.\nTo provide guidelines and best practices concerning the technical aspects of sharing code and designs (e.g., hosting locations, appropriate services to utilize, proper use of CERTH infrastructures, general Open Source tools such as license compliance checks, and testing configuration methodologies).\nTo facilitate and enhance the dissemination of Open Source.\nTo advise CERTH Management on Open Source matters that impact the organization.\n\nExternally, the CERTH OSPO has the following roles:\n\nTo provide a public directory of CERTH’s Open Source portfolio that is easily accessible via the CERTH OSPO website.\nTo guide interested external parties toward opportunities, projects, and experts at CERTH through the public directory, events, external communications, the website, etc.\nTo support external inquiries directed to CERTH management that pertain to Open Source."
+    "section": "Our activities",
+    "text": "Our activities\nThe CERTH OSPO serves as an entry point to CERTH’s open-source expertise by forming an open and inclusive service, operating collaboratively with all Institutes, and serving externally as a visible interface for potential partners and the interested public. Our activities encompass events, communication, support, and training throughout the year. Externally, we assume the following roles:\n\nMaintain a public directory of CERTH’s open source portfolio that is easily accessible via this website.\nSupport inquiries directed to CERTH management that pertain to open source.\nGuide interested parties toward opportunities, projects, and experts at CERTH. This is achieved through the public directory, events, external communications, the website, etc."
+  },
+  {
+    "objectID": "index-en.html#support",
+    "href": "index-en.html#support",
+    "title": "Open Source Program Office | CERTH",
+    "section": "Support",
+    "text": "Support\nInternally, we aim to guide and train CERTH staff regarding best practices, tools, licensing, developments, etc., for open source projects. In particular, we:\n\nProvide recommendations for the release of software developed at CERTH as open-source projects. This includes guidelines and best practices concerning the technical aspects of designing and sharing code (e.g., hosting locations, appropriate services to utilize, proper use of CERTH infrastructures, general open source tools such as license compliance checks, and testing configuration methodologies).\nFacilitate and enhance the dissemination of open source.\nAdvise CERTH management on open source matters that impact the organization."
   },
   {
     "objectID": "index.html",
@@ -567,31 +574,7 @@
     "href": "docs/key-concepts/licensing.html",
     "title": "Licensing",
     "section": "",
-    "text": "Choosing a licence is one of the most important steps in open-sourcing a project. It is a choice you make initially that affects the project life-cycle and adoption outside of CERTH.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "Licensing"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/licensing.html#the-purpose-of-a-licence",
-    "href": "docs/key-concepts/licensing.html#the-purpose-of-a-licence",
-    "title": "Licensing",
-    "section": "The Purpose of a Licence",
-    "text": "The Purpose of a Licence\nOpen-sourcing a project reverses the default “all rights reserved” model of copyright. A licence formally communicates the rights that you, as a copyright holder, grant to others for the use of your work. Without a licence, others have no legal right to use, copy, modify, or distribute your code, even if it is publicly visible on a repository hosting platform.\nLicence selection significantly influences a project’s lifecycle and its external adoption.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "Licensing"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/licensing.html#software-licensing",
-    "href": "docs/key-concepts/licensing.html#software-licensing",
-    "title": "Licensing",
-    "section": "Software licensing",
-    "text": "Software licensing\nThe procedure for choosing a licence for CERTH-developed software is defined in the licensing recommendations section. In general, there are many good open-source licences and the choice of licence will depend on what you want to achieve. The three main classes of licence are:\n\nPermissive licences;\nWeakly-reciprocal licences;\nStrongly-reciprocal licences.\n\n\nPermissive licences\nExamples: Apache-2.0, BSD-3-Clause, MIT.\nIf you license your code under this type of licence, then anybody can take it, change it or combine with it as they wish and distribute the result also as they wish. They just have to respect basic conditions, such as including your copyright notice in the software they distribute. Among the freedoms you grant when you use a permissive licence is the freedom to modify your software and not distribute it as open source, i.e. to make it proprietary.\nThis is a good licence family if you want to allow others (e.g. a company) to use (or even modify) your software in a proprietary product, without releasing any sources.\n\n\nWeakly-reciprocal licences\nExamples: LGPL-3.0, LGPL-2.1, MPL-2.0.\nIf you license your project under this type of licence and somebody takes your code and combines it with theirs, upon distribution they do not have to disclose their own sources, just yours, whether or not they have modified them, and under the same licence you used.\nThis is a good licence family if you want to benefit from improvements to your code but do not want to force the users of your code to disclose their own sources.\n\n\nStrongly-reciprocal licences\nExamples: GPL-3.0 and GPL-2.0.\nIf you license your project under this type of licence and somebody uses your code and combines it with theirs, they will need to release the sources of both your code (modified or not) and their code.\nThe vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well.",
+    "text": "Choosing a licence is one of the most important first steps in open-sourcing a project. Without one, projects default to the “all rights reserved” model of copyright, where others have no legal right to use, copy, modify, or redistribute your code, even if it is publicly visible on a code repository. Thus, licenses grant others certain legal rights for your code. At the same time, they protect against malpractices or damages caused by bugs by explicitly refusing accountability.\nProcesses for applying a license to CERTH-developed software are presented in the licensing recommendations section. Here we remind that CERTH is the license holder of software produced during research and development activities. Yet, the exact license must be chosen at a per-project basis, given that it must comply with the license of dependent software, and affects how code can be adopted externally. For example, some licenses disallow usage of code in non-open-source projects (see below).\nNext some popular licenses are presented. These are broadly categorized in terms of permissiveness, but compliance between licenses in the same category is not guaranteed. For example, Apache-2.0 can be used within a more permissive BSD-3-Clause project only if Apache-2.0 requirements are maintained. For this reason, you may occasionally encounter mixed-licensed projects, where parts of the codebase are governed by different licenses. That said, most projects try to stick to only one license for simplicity.\n\nPermissive licenses\nExamples: Apache-2.0, BSD-3-Clause, MIT.\nIf you license your code under this type of licence, then anybody can reuse it, modify/combine it with their base, and redistribute the result. They just have to respect basic conditions, such as including your original copyright notice in the software they distribute.\nAmong the freedoms you grant when you use a permissive licence is the freedom to modify your software without needing to distribute it as open source. That is, others (e.g. a company) can create proprietary products based on your code. Most academic works stick to either Apache-2.0 or MIT licenses, as they are the easiest to reuse.\n\n\nWeakly-reciprocal licenses\nExamples: LGPL-3.0, LGPL-2.1, MPL-2.0.\nIf you license your project under this type of licence and somebody takes your source code and combines it with theirs, upon distribution of their code they also have to disclose yours under your license. This includes modifications that they made to your source code. However, they can keep their own sources undisclosed. This way, you can benefit from improvements to your codebase.\nKeep in mind that many licenses treat code reuse and dynamic linking to compiled binaries differently (dynamic linking is the practice of calling external software during runtime while only being aware of the programmatic interface when writing your programs). For example, one may release a proprietary program that links against an LGPL-3.0 library as long as they do not actually redistribute the latter themselves - their program’s users need to install that separately in their system.\n\n\nStrongly-reciprocal licenses\nExamples: GPL-3.0 and GPL-2.0.\nIf you license your project under this type of licence and somebody distributes software that uses your code and combines it with theirs, they need to release the sources of both your code (modified or not) and their code under the same license.\nThe vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well. It is thus often referred to as a “viral” license.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
@@ -603,7 +586,7 @@
     "href": "docs/recommendations/licensing.html",
     "title": "Licensing",
     "section": "",
-    "text": "CERTH’s Open Science commitments, aligned with the European Open Science Cloud (EOSC) and Horizon Europe requirements, encourage making software developed in the course of publicly funded research available as open source wherever possible.\nLicence selection should involve a consultation with the CERTH OSPO. When selecting a licence, consider:\n\nCommunity norms within your ecosystem\nWhich sharing regime (permissive, weakly-reciprocal, or strongly-reciprocal) aligns with your project’s objectives (see Key concepts: Licensing)\nObligations imposed by your funding body or consortium agreement",
+    "text": "CERTH’s Open Science commitments, aligned with the European Open Science Cloud (EOSC) and Horizon Europe requirements, encourage making software developed in the course of publicly funded research available as open source wherever possible. Licence selection should involve a consultation with the CERTH OSPO and consider:\n\nDependent software which you have used in your project.\nCommunity norms within your ecosystem.\nWhich sharing regime (permissive, weakly-reciprocal, or strongly-reciprocal) aligns with your project’s objectives (see Key concepts: Licensing).\nObligations imposed by your funding body or consortium agreement.",
     "crumbs": [
       "Technical Documentation",
       "Recommendations",
@@ -615,19 +598,7 @@
     "href": "docs/recommendations/licensing.html#overview",
     "title": "Licensing",
     "section": "",
-    "text": "CERTH’s Open Science commitments, aligned with the European Open Science Cloud (EOSC) and Horizon Europe requirements, encourage making software developed in the course of publicly funded research available as open source wherever possible.\nLicence selection should involve a consultation with the CERTH OSPO. When selecting a licence, consider:\n\nCommunity norms within your ecosystem\nWhich sharing regime (permissive, weakly-reciprocal, or strongly-reciprocal) aligns with your project’s objectives (see Key concepts: Licensing)\nObligations imposed by your funding body or consortium agreement",
-    "crumbs": [
-      "Technical Documentation",
-      "Recommendations",
-      "Licensing"
-    ]
-  },
-  {
-    "objectID": "docs/recommendations/licensing.html#licensing-software",
-    "href": "docs/recommendations/licensing.html#licensing-software",
-    "title": "Licensing",
-    "section": "Licensing Software",
-    "text": "Licensing Software\nUse a licence approved by the Open Source Initiative (OSI) for CERTH-copyrighted software. Common choices:\n\n\n\n\n\n\n\n\nLicence\nType\nTypical use case\n\n\n\n\nApache-2.0\nPermissive\nGeneral software; maximum adoption; includes patent grant\n\n\nMIT\nPermissive\nSmall utilities and libraries; minimal requirements\n\n\nGPL-3.0\nStrongly reciprocal\nTools where all derivatives must remain open source\n\n\nLGPL-3.0\nWeakly reciprocal\nLibraries intended to be linked from proprietary software",
+    "text": "CERTH’s Open Science commitments, aligned with the European Open Science Cloud (EOSC) and Horizon Europe requirements, encourage making software developed in the course of publicly funded research available as open source wherever possible. Licence selection should involve a consultation with the CERTH OSPO and consider:\n\nDependent software which you have used in your project.\nCommunity norms within your ecosystem.\nWhich sharing regime (permissive, weakly-reciprocal, or strongly-reciprocal) aligns with your project’s objectives (see Key concepts: Licensing).\nObligations imposed by your funding body or consortium agreement.",
     "crumbs": [
       "Technical Documentation",
       "Recommendations",
@@ -638,8 +609,44 @@
     "objectID": "docs/recommendations/licensing.html#licence-compatibility",
     "href": "docs/recommendations/licensing.html#licence-compatibility",
     "title": "Licensing",
-    "section": "Licence Compatibility",
-    "text": "Licence Compatibility\nWhen combining components under different licences, compatibility must be verified before release. This is part of your due diligence (see Key concepts: Due diligence).\nA common compatibility matrix:\n\n\n\n\n\n\n\n\n\nYou want to use…\nUnder Apache-2.0\nUnder MIT\nUnder GPL-3.0\n\n\n\n\nApache-2.0 code\n✓\n✓\n✓\n\n\nMIT code\n✓\n✓\n✓\n\n\nGPL-3.0 code\nOnly if your project is also GPL-3.0\nOnly if your project is also GPL-3.0\n✓\n\n\nLGPL-3.0 library\n✓ (dynamic linking)\n✓ (dynamic linking)\n✓",
+    "section": "Licence compatibility",
+    "text": "Licence compatibility\nUse a licence approved by the Open Source Initiative (OSI) for CERTH-copyrighted software. Common choices are overviewed here.\n\n\n\n\n\n\n\n\nLicence\nType\nTypical use case\n\n\n\n\nApache-2.0\nPermissive\nGeneral software; maximum adoption; includes patent grant\n\n\nMIT\nPermissive\nSmall utilities and libraries; minimal requirements\n\n\nGPL-3.0\nStrongly reciprocal\nTools where all derivatives must remain open source\n\n\nLGPL-3.0\nWeakly reciprocal\nLibraries intended to be linked from proprietary software\n\n\n\nWhen combining components, for example by reusing/forking and modifying the code of others license compatibility must be verified before releasing the result. This is part of your due diligence (see Key concepts: Due diligence). A common compatibility matrix is shown below, where do note that reused code must maintain the original license, for example while accompanied by the exact original license file.\n\n\n\n\n\n\n\n\n\nYou want to use…\nUnder Apache-2.0\nUnder MIT\nUnder GPL-3.0\n\n\n\n\nApache-2.0 code\n✓\n✓\n✓\n\n\nMIT code\n✓\n✓\n✓\n\n\nGPL-3.0 code\nOnly if your project is also GPL-3.0\nOnly if your project is also GPL-3.0\n✓\n\n\nLGPL-3.0 library\n✓ (dynamic linking)\n✓ (dynamic linking)\n✓\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIt does not suffice to only mention the desired license in a README file. You need to actually include the license text.",
+    "crumbs": [
+      "Technical Documentation",
+      "Recommendations",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/recommendations/licensing.html#option-1-add-license-in-code-comments",
+    "href": "docs/recommendations/licensing.html#option-1-add-license-in-code-comments",
+    "title": "Licensing",
+    "section": "Option 1: Add license in code comments",
+    "text": "Option 1: Add license in code comments\nThe two most recognized ways of applying licenses are either as code comments or by including license files in the source code directory and appropriately marking your files. The legal text that should go into those files or comments is different by license but typically requires manually filling out the copyright holder, which is CERTH, and year, which is the year of the code’s first public release.\nComment-based licensing requires less book-keeping for small projects. It can thus serve as starting point until the project grows in size, in which case you can move to the option of adding license files, as described next. A Python file licensed under Apache-2.0 may look like this:\n# Copyright 2026 Centre for Research and Technology Hellas (CERTH)\n# \n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n# \n#     http://www.apache.org/licenses/LICENSE-2.0\n# \n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nname = \"the CERTH OSPO\"\nprint(f\"Hello from {name}!\")",
+    "crumbs": [
+      "Technical Documentation",
+      "Recommendations",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/recommendations/licensing.html#option-2-add-license-files",
+    "href": "docs/recommendations/licensing.html#option-2-add-license-files",
+    "title": "Licensing",
+    "section": "Option 2: Add license files",
+    "text": "Option 2: Add license files\nIn larger projects (e.g., with &gt;30 files), you may want to concentrate your licensing information in one place. Historically, an ad-hoc description would have been provided to describe which licenses apply to which files or code segments. However, we recommend the REUSE specification as a recommended standard that is also endorsed by the Free Software Foundation Europe (FSFE) and broadly adopted in European open-source projects like the Linux kernel.\nThis specification requires first gathering all applicable licenses under a LICENSES/ directory in the repository root. Licenses should contain the full licence text for each licence used (e.g., LICENSES/Apache-2.0.txt). Then, in each source code file, a copyright notice briefly establishes the ownership and creation timeframe. Like above, the notice identifies the copyright holder and the year the specific file was created. Again, only the initial year of creation needs to be included. Successive years or ranges are unnecessary unless the file has been substantially revised by a different contributor, in which case additional lines can be added:\nFormat:\nSPDX-FileCopyrightText: &lt;year&gt; &lt;copyright holder&gt;\nExample:\nSPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\nSPDX-FileCopyrightText: 2025 Contributor Name, Affiliation\nThe notice by itself does not yet link to a license. This is done by also including the license notice using an appropriate SPDX identifier. Do note that the license notice is also not sufficient for meeting all legal licensing requirements; you should also add the used license in the LICENSE/ directory.\nFormat:\nSPDX-License-Identifier: &lt;SPDX-identifier&gt;\nComplete example for an Apache-2.0-licensed Python source file:\n# SPDX-FileCopyrightText: 2026 Centre for Research and Technology Hellas (CERTH)\n# SPDX-License-Identifier: Apache-2.0\n\nname = \"the CERTH OSPO\"\nprint(f\"Hello from {name}!\")\nThis machine-readable format enables automated licence compliance verification by tools such as reuse lint and third-party scanners used by downstream integrators. For example, check that all your files have been properly annotated with copyright and license by installing the reuse package in your Python virtual environment. The CERTH OSPO can assist with initial setup and interpreting results.\npip install reuse\nreuse lint",
+    "crumbs": [
+      "Technical Documentation",
+      "Recommendations",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/recommendations/licensing.html#placement-in-source-files",
+    "href": "docs/recommendations/licensing.html#placement-in-source-files",
+    "title": "Licensing",
+    "section": "Placement in source files",
+    "text": "Placement in source files\nPlace SPDX tags or license comments in a comment block at the very top of each source file, before any other content like imports or package declarations. For file formats that do not support inline comments (e.g., images, binary assets, or certain data formats shipped with the software), use a companion .license sidecar file with the same base name:\nmy-asset.svg          ← the asset\nmy-asset.svg.license  ← contains the SPDX tags\nIf you have such files that cannot carry inline notices and are using the REUSE specification, you need to state which they are with a REUSE.toml file (or legacy .reuse/dep5). This is placed at the root of your project and maps file globs to their copyright and licence information.",
     "crumbs": [
       "Technical Documentation",
       "Recommendations",

@@ -222,13 +222,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-purpose-of-a-licence" id="toc-the-purpose-of-a-licence" class="nav-link active" data-scroll-target="#the-purpose-of-a-licence">The Purpose of a Licence</a></li>
-  <li><a href="#software-licensing" id="toc-software-licensing" class="nav-link" data-scroll-target="#software-licensing">Software licensing</a>
-  <ul class="collapse">
-  <li><a href="#permissive-licences" id="toc-permissive-licences" class="nav-link" data-scroll-target="#permissive-licences">Permissive licences</a></li>
-  <li><a href="#weakly-reciprocal-licences" id="toc-weakly-reciprocal-licences" class="nav-link" data-scroll-target="#weakly-reciprocal-licences">Weakly-reciprocal licences</a></li>
-  <li><a href="#strongly-reciprocal-licences" id="toc-strongly-reciprocal-licences" class="nav-link" data-scroll-target="#strongly-reciprocal-licences">Strongly-reciprocal licences</a></li>
-  </ul></li>
+  <li><a href="#permissive-licenses" id="toc-permissive-licenses" class="nav-link active" data-scroll-target="#permissive-licenses">Permissive licenses</a></li>
+  <li><a href="#weakly-reciprocal-licenses" id="toc-weakly-reciprocal-licenses" class="nav-link" data-scroll-target="#weakly-reciprocal-licenses">Weakly-reciprocal licenses</a></li>
+  <li><a href="#strongly-reciprocal-licenses" id="toc-strongly-reciprocal-licenses" class="nav-link" data-scroll-target="#strongly-reciprocal-licenses">Strongly-reciprocal licenses</a></li>
   </ul>
 </nav>
     </div>
@@ -254,40 +250,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Choosing a licence is one of the most important steps in open-sourcing a project. It is a choice you make initially that affects the project life-cycle and adoption outside of CERTH.</p>
-<section id="the-purpose-of-a-licence" class="level2">
-<h2 class="anchored" data-anchor-id="the-purpose-of-a-licence">The Purpose of a Licence</h2>
-<p>Open-sourcing a project reverses the default “all rights reserved” model of copyright. A licence formally communicates the rights that you, as a copyright holder, grant to others for the use of your work. Without a licence, others have no legal right to use, copy, modify, or distribute your code, even if it is publicly visible on a repository hosting platform.</p>
-<p>Licence selection significantly influences a project’s lifecycle and its external adoption.</p>
-</section>
-<section id="software-licensing" class="level2">
-<h2 class="anchored" data-anchor-id="software-licensing">Software licensing</h2>
-<p>The procedure for choosing a licence for CERTH-developed software is defined in the <a href="../../docs/recommendations/licensing.html">licensing recommendations</a> section. In general, there are many good open-source licences and the choice of licence will depend on what you want to achieve. The three main classes of licence are:</p>
-<ul>
-<li>Permissive licences;</li>
-<li>Weakly-reciprocal licences;</li>
-<li>Strongly-reciprocal licences.</li>
-</ul>
-<section id="permissive-licences" class="level3">
-<h3 class="anchored" data-anchor-id="permissive-licences">Permissive licences</h3>
+<p>Choosing a licence is one of the most important first steps in open-sourcing a project. Without one, projects default to the “all rights reserved” model of copyright, where others have no legal right to use, copy, modify, or redistribute your code, even if it is publicly visible on a code repository. Thus, licenses grant others certain legal rights for your code. At the same time, they protect against malpractices or damages caused by bugs by explicitly refusing accountability.</p>
+<p>Processes for applying a license to CERTH-developed software are presented in the <a href="../../docs/recommendations/licensing.html">licensing recommendations</a> section. Here we remind that CERTH is the license holder of software produced during research and development activities. Yet, the exact license must be chosen at a per-project basis, given that it must comply with the license of dependent software, and affects how code can be adopted externally. For example, some licenses disallow usage of code in non-open-source projects (see below).</p>
+<p>Next some popular licenses are presented. These are broadly categorized in terms of permissiveness, but compliance between licenses in the same category is not guaranteed. For example, Apache-2.0 can be used within a more permissive BSD-3-Clause project only if Apache-2.0 requirements are maintained. For this reason, you may occasionally encounter mixed-licensed projects, where parts of the codebase are governed by different licenses. That said, most projects try to stick to only one license for simplicity.</p>
+<section id="permissive-licenses" class="level3">
+<h3 class="anchored" data-anchor-id="permissive-licenses">Permissive licenses</h3>
 <p>Examples: <a href="https://opensource.org/license/apache-2-0/">Apache-2.0</a>, <a href="https://opensource.org/license/bsd-3-clause/">BSD-3-Clause</a>, <a href="https://opensource.org/license/mit/">MIT</a>.</p>
-<p>If you license your code under this type of licence, then anybody can take it, change it or combine with it as they wish and distribute the result also as they wish. They just have to respect basic conditions, such as including your copyright notice in the software they distribute. Among the freedoms you grant when you use a permissive licence is the freedom to modify your software and not distribute it as open source, i.e.&nbsp;to make it proprietary.</p>
-<p>This is a good licence family if you want to allow others (e.g.&nbsp;a company) to use (or even modify) your software in a proprietary product, without releasing any sources.</p>
+<p>If you license your code under this type of licence, then anybody can reuse it, modify/combine it with their base, and redistribute the result. They just have to respect basic conditions, such as including your original copyright notice in the software they distribute.</p>
+<p>Among the freedoms you grant when you use a permissive licence is the freedom to modify your software without needing to distribute it as open source. That is, others (e.g.&nbsp;a company) can create proprietary products based on your code. Most academic works stick to either Apache-2.0 or MIT licenses, as they are the easiest to reuse.</p>
 </section>
-<section id="weakly-reciprocal-licences" class="level3">
-<h3 class="anchored" data-anchor-id="weakly-reciprocal-licences">Weakly-reciprocal licences</h3>
+<section id="weakly-reciprocal-licenses" class="level3">
+<h3 class="anchored" data-anchor-id="weakly-reciprocal-licenses">Weakly-reciprocal licenses</h3>
 <p>Examples: <a href="https://opensource.org/license/lgpl-3-0/">LGPL-3.0</a>, <a href="https://opensource.org/license/lgpl-2-1/">LGPL-2.1</a>, <a href="https://opensource.org/license/mpl-2-0/">MPL-2.0</a>.</p>
-<p>If you license your project under this type of licence and somebody takes your code and combines it with theirs, upon distribution they do not have to disclose their own sources, just yours, whether or not they have modified them, and under the same licence you used.</p>
-<p>This is a good licence family if you want to benefit from improvements to your code but do not want to force the users of your code to disclose their own sources.</p>
+<p>If you license your project under this type of licence and somebody takes your source code and combines it with theirs, upon distribution of their code they also have to disclose yours under your license. This includes modifications that they made to your source code. However, they can keep their own sources undisclosed. This way, you can benefit from improvements to your codebase.</p>
+<p>Keep in mind that many licenses treat code reuse and dynamic linking to compiled binaries differently (dynamic linking is the practice of calling external software during runtime while only being aware of the programmatic interface when writing your programs). For example, one may release a proprietary program that links against an LGPL-3.0 library as long as they do not actually redistribute the latter themselves - their program’s users need to install that separately in their system.</p>
 </section>
-<section id="strongly-reciprocal-licences" class="level3">
-<h3 class="anchored" data-anchor-id="strongly-reciprocal-licences">Strongly-reciprocal licences</h3>
+<section id="strongly-reciprocal-licenses" class="level3">
+<h3 class="anchored" data-anchor-id="strongly-reciprocal-licenses">Strongly-reciprocal licenses</h3>
 <p>Examples: <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0</a> and <a href="https://opensource.org/license/gpl-2-0/">GPL-2.0</a>.</p>
-<p>If you license your project under this type of licence and somebody uses your code and combines it with theirs, they will need to release the sources of both your code (modified or not) and their code.</p>
-<p>The vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well.</p>
+<p>If you license your project under this type of licence and somebody distributes software that uses your code and combines it with theirs, they need to release the sources of both your code (modified or not) and their code under the same license.</p>
+<p>The vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well. It is thus often referred to as a “viral” license.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
