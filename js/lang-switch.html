@@ -1,0 +1,114 @@
+<script>
+(function () {
+  // Runs synchronously at end of <body> — DOM is fully available, no DOMContentLoaded needed.
+  let path = window.location.pathname;
+
+  // Convention: no suffix = GR (default), -en suffix = EN, /docs/ = EN, /docs-gr/ = GR
+  let isEN = (path.indexOf('/docs/') !== -1 && path.indexOf('software-gr') === -1) || path.indexOf('index-en') !== -1 || path.indexOf('contact-en') !== -1 || path.indexOf('software-en') !== -1;
+  let isGR = !isEN;
+
+  // ── Equivalent page in the other language ─────────────────────────────────
+  let otherHref;
+  if (path.indexOf('software-en.html') !== -1) {
+    otherHref = path.replace('software-en.html', 'software-gr.html');
+  } else if (path.indexOf('software-gr.html') !== -1) {
+    otherHref = path.replace('software-gr.html', 'software-en.html');
+  } else if (path.indexOf('/docs-gr/') !== -1) {
+    otherHref = path.replace('/docs-gr/', '/docs/');
+  } else if (path.indexOf('/docs/') !== -1) {
+    otherHref = path.replace('/docs/', '/docs-gr/');
+  } else if (path.indexOf('contact-en.html') !== -1) {
+    otherHref = path.replace('contact-en.html', 'contact.html');
+  } else if (path.indexOf('contact.html') !== -1) {
+    otherHref = path.replace('contact.html', 'contact-en.html');
+  } else if (path.indexOf('index-en.html') !== -1) {
+    otherHref = path.replace('index-en.html', 'index.html');
+  } else {
+    let dir = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
+    otherHref = dir + 'index-en.html';
+  }
+
+  // ── Site base path ────────────────────────────────────────────────────────
+  let m = path.match(/^(.*?)\/(docs-gr|docs)\//);
+  let base = m ? m[1] + '/' : (path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1));
+
+  let targets = {
+    home:    { gr: base + 'index.html',      en: base + 'index-en.html' },
+    docs:    { gr: base + 'docs-gr/index.html', en: base + 'docs/index.html' },
+    contact: { gr: base + 'contact.html',    en: base + 'contact-en.html' },
+    software:{ gr: base + 'docs/project/software-gr.html', en: base + 'docs/project/software-en.html' }
+  };
+
+  // ── Rewrite brand/title link (always hardcoded to EN by Quarto) ──────────
+  let brandLink = document.querySelector('a.navbar-brand');
+  if (brandLink) {
+    brandLink.href = isGR ? targets.home.gr : targets.home.en;
+    let brandTitle = brandLink.querySelector('.navbar-title');
+    if (brandTitle) brandTitle.textContent = isGR
+      ? 'Γραφείο Λογισμικού Ανοιχτού Κώδικα | ΕΚΕΤΑ'
+      : 'Open Source Program Office | CERTH';
+  }
+
+  // ── Update every relevant navbar link ─────────────────────────────────────
+  let homeLink = null;
+  let docsLink = null;
+  let softwareLink = null;
+  let contactLink = null;
+  document.querySelectorAll('.navbar-nav a.nav-link').forEach(function (a) {
+    let span = a.querySelector('.menu-text');
+    if (!span) return;
+    let text = span.textContent.trim();
+
+    if (text === 'EN' || text === 'GR') {
+      let activeStyle = 'font-weight:bold;text-decoration:underline;';
+      let inactiveStyle = 'opacity:0.5;';
+      span.innerHTML =
+        '<span style="' + (isGR ? activeStyle : inactiveStyle) + '">GR</span>' +
+        '<span style="margin:0 4px">|</span>' +
+        '<span style="' + (isGR ? inactiveStyle : activeStyle) + '">EN</span>';
+      a.href = otherHref;
+      // Reveal toggle — was hidden by lang-init.html to suppress flash
+      let item = a.closest('.nav-item');
+      if (item) item.style.visibility = 'visible';
+    } else if (text === 'Home' || text === 'Αρχική') {
+      a.href = isGR ? targets.home.gr : targets.home.en;
+      span.textContent = isGR ? 'Αρχική' : 'Home';
+      homeLink = a;
+    } else if (text === 'Technical Documentation' || text === 'Τεχνική Τεκμηρίωση') {
+      a.href = isGR ? targets.docs.gr : targets.docs.en;
+      span.textContent = isGR ? 'Τεχνική Τεκμηρίωση' : 'Technical Documentation';
+      docsLink = a;
+    } else if (text === 'Software' || text === 'Λογισμικό') {
+      a.href = isGR ? targets.software.gr : targets.software.en;
+      span.textContent = isGR ? 'Λογισμικό' : 'Software';
+      softwareLink = a;
+    } else if (text === 'Contact' || text === 'Επικοινωνία') {
+      a.href = isGR ? targets.contact.gr : targets.contact.en;
+      span.textContent = isGR ? 'Επικοινωνία' : 'Contact';
+      contactLink = a;
+    }
+  });
+
+  // ── Fix navbar active state after rewriting hrefs ─────────────────────────
+  let onDocs    = path.indexOf('/docs-gr/') !== -1 || path.indexOf('/docs/') !== -1;
+  let onContact = path.indexOf('contact') !== -1;
+  let onSoftware = path.indexOf('software') !== -1;
+  onDocs = onDocs&&!onSoftware;
+
+  function setActive(link, active) {
+    if (!link) return;
+    if (active) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
+  }
+
+  setActive(homeLink,    !onDocs && !onContact);
+  setActive(docsLink,    onDocs);
+  setActive(contactLink, onContact);
+  setActive(softwareLink, onSoftware);
+})();
+</script>

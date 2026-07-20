@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-83c8fbbc3642f6b79dd6957aee1e8517.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a03f207eb32853d4d70537ede1d58a7d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -140,6 +140,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link active" href="../../docs/index.html" aria-current="page"> 
 <span class="menu-text">Technical Documentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/project/software-en.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../contact.html"> 
@@ -243,23 +247,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Project</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/project/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -355,15 +342,19 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
 <script>
 (function () {
   // Runs synchronously at end of <body> — DOM is fully available, no DOMContentLoaded needed.
-  var path = window.location.pathname;
+  let path = window.location.pathname;
 
   // Convention: no suffix = GR (default), -en suffix = EN, /docs/ = EN, /docs-gr/ = GR
-  var isEN = path.indexOf('/docs/') !== -1 || path.indexOf('index-en') !== -1 || path.indexOf('contact-en') !== -1;
-  var isGR = !isEN;
+  let isEN = (path.indexOf('/docs/') !== -1 && path.indexOf('software-gr') === -1) || path.indexOf('index-en') !== -1 || path.indexOf('contact-en') !== -1 || path.indexOf('software-en') !== -1;
+  let isGR = !isEN;
 
   // ── Equivalent page in the other language ─────────────────────────────────
-  var otherHref;
-  if (path.indexOf('/docs-gr/') !== -1) {
+  let otherHref;
+  if (path.indexOf('software-en.html') !== -1) {
+    otherHref = path.replace('software-en.html', 'software-gr.html');
+  } else if (path.indexOf('software-gr.html') !== -1) {
+    otherHref = path.replace('software-gr.html', 'software-en.html');
+  } else if (path.indexOf('/docs-gr/') !== -1) {
     otherHref = path.replace('/docs-gr/', '/docs/');
   } else if (path.indexOf('/docs/') !== -1) {
     otherHref = path.replace('/docs/', '/docs-gr/');
@@ -374,49 +365,51 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
   } else if (path.indexOf('index-en.html') !== -1) {
     otherHref = path.replace('index-en.html', 'index.html');
   } else {
-    var dir = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
+    let dir = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
     otherHref = dir + 'index-en.html';
   }
 
   // ── Site base path ────────────────────────────────────────────────────────
-  var m = path.match(/^(.*?)\/(docs-gr|docs)\//);
-  var base = m ? m[1] + '/' : (path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1));
+  let m = path.match(/^(.*?)\/(docs-gr|docs)\//);
+  let base = m ? m[1] + '/' : (path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1));
 
-  var targets = {
+  let targets = {
     home:    { gr: base + 'index.html',      en: base + 'index-en.html' },
     docs:    { gr: base + 'docs-gr/index.html', en: base + 'docs/index.html' },
-    contact: { gr: base + 'contact.html',    en: base + 'contact-en.html' }
+    contact: { gr: base + 'contact.html',    en: base + 'contact-en.html' },
+    software:{ gr: base + 'docs/project/software-gr.html', en: base + 'docs/project/software-en.html' }
   };
 
   // ── Rewrite brand/title link (always hardcoded to EN by Quarto) ──────────
-  var brandLink = document.querySelector('a.navbar-brand');
+  let brandLink = document.querySelector('a.navbar-brand');
   if (brandLink) {
     brandLink.href = isGR ? targets.home.gr : targets.home.en;
-    var brandTitle = brandLink.querySelector('.navbar-title');
+    let brandTitle = brandLink.querySelector('.navbar-title');
     if (brandTitle) brandTitle.textContent = isGR
       ? 'Γραφείο Λογισμικού Ανοιχτού Κώδικα | ΕΚΕΤΑ'
       : 'Open Source Program Office | CERTH';
   }
 
   // ── Update every relevant navbar link ─────────────────────────────────────
-  var homeLink = null;
-  var docsLink = null;
-  var contactLink = null;
+  let homeLink = null;
+  let docsLink = null;
+  let softwareLink = null;
+  let contactLink = null;
   document.querySelectorAll('.navbar-nav a.nav-link').forEach(function (a) {
-    var span = a.querySelector('.menu-text');
+    let span = a.querySelector('.menu-text');
     if (!span) return;
-    var text = span.textContent.trim();
+    let text = span.textContent.trim();
 
     if (text === 'EN' || text === 'GR') {
-      var activeStyle = 'font-weight:bold;text-decoration:underline;';
-      var inactiveStyle = 'opacity:0.5;';
+      let activeStyle = 'font-weight:bold;text-decoration:underline;';
+      let inactiveStyle = 'opacity:0.5;';
       span.innerHTML =
         '<span style="' + (isGR ? activeStyle : inactiveStyle) + '">GR</span>' +
         '<span style="margin:0 4px">|</span>' +
         '<span style="' + (isGR ? inactiveStyle : activeStyle) + '">EN</span>';
       a.href = otherHref;
       // Reveal toggle — was hidden by lang-init.html to suppress flash
-      var item = a.closest('.nav-item');
+      let item = a.closest('.nav-item');
       if (item) item.style.visibility = 'visible';
     } else if (text === 'Home' || text === 'Αρχική') {
       a.href = isGR ? targets.home.gr : targets.home.en;
@@ -426,6 +419,10 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
       a.href = isGR ? targets.docs.gr : targets.docs.en;
       span.textContent = isGR ? 'Τεχνική Τεκμηρίωση' : 'Technical Documentation';
       docsLink = a;
+    } else if (text === 'Software' || text === 'Λογισμικό') {
+      a.href = isGR ? targets.software.gr : targets.software.en;
+      span.textContent = isGR ? 'Λογισμικό' : 'Software';
+      softwareLink = a;
     } else if (text === 'Contact' || text === 'Επικοινωνία') {
       a.href = isGR ? targets.contact.gr : targets.contact.en;
       span.textContent = isGR ? 'Επικοινωνία' : 'Contact';
@@ -434,8 +431,10 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
   });
 
   // ── Fix navbar active state after rewriting hrefs ─────────────────────────
-  var onDocs    = path.indexOf('/docs-gr/') !== -1 || path.indexOf('/docs/') !== -1;
-  var onContact = path.indexOf('contact') !== -1;
+  let onDocs    = path.indexOf('/docs-gr/') !== -1 || path.indexOf('/docs/') !== -1;
+  let onContact = path.indexOf('contact') !== -1;
+  let onSoftware = path.indexOf('software') !== -1;
+  onDocs = onDocs&&!onSoftware;
 
   function setActive(link, active) {
     if (!link) return;
@@ -451,6 +450,7 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
   setActive(homeLink,    !onDocs && !onContact);
   setActive(docsLink,    onDocs);
   setActive(contactLink, onContact);
+  setActive(softwareLink, onSoftware);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -526,7 +526,7 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ospo-certh\.github\.io\/OSPO_CERTH\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

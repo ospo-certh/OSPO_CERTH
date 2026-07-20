@@ -1,1 +1,0 @@
-Sitemap: https://ospo-certh.github.io/OSPO_CERTH/sitemap.xml
