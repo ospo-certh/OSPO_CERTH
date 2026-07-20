@@ -50,6 +50,10 @@ website:
               href: docs/recommendations/copyright.qmd
             - text: "Licensing"
               href: docs/recommendations/licensing.qmd
+        - section: "Submit Software"
+          contents:
+            - text: "Submit Your Software"
+              href: docs/submit-software.qmd
 
     - id: docs-gr
       title: "Τεχνική Τεκμηρίωση"
@@ -74,6 +78,10 @@ website:
               href: docs-gr/recommendations/copyright.qmd
             - text: "Αδειοδότηση"
               href: docs-gr/recommendations/licensing.qmd
+        - section: "Υποβολή Λογισμικού"
+          contents:
+            - text: "Υποβάλετε το Λογισμικό σας"
+              href: docs-gr/submit-software.qmd
 
   bread-crumbs: false
 
