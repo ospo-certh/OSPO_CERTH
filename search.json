@@ -95,155 +95,171 @@
     ]
   },
   {
-    "objectID": "docs/key-concepts/due-diligence.html",
-    "href": "docs/key-concepts/due-diligence.html",
-    "title": "Due Diligence",
+    "objectID": "docs/key-concepts/licensing.html",
+    "href": "docs/key-concepts/licensing.html",
+    "title": "Licensing",
     "section": "",
-    "text": "Due diligence is a legal term describing the process of compliance and risk analysis. In the context of open source, the term is often used in a broader sense, to also consider risks to an organisation’s reputation and liability.\nAt CERTH, due diligence should be performed before open-sourcing a project and revisited as the project evolves.\nThe features of a due diligence analysis depend heavily on the nature of the project, but may include:\n\nIdentifying the authors of the project in order to ascertain the copyright holders.\nDetermining the use and risk of dependencies, to prevent, for instance, the use of unmaintained or otherwise unwanted dependencies for reasons such as licence incompatibility.\nAssessing the security and reputational risks associated with the project, to prevent, for instance, the creation of new attack vectors and their public coverage.\nClearing potential liability concerns, for instance export controls, dual-use concerns, or regulated application domains.\nReviewing the code / design, to prevent, for instance, reputational damage due to publishing something of inadequate quality.\n\nDue diligence features evolve through the lifetime of a project and should be re-assessed on a regular basis.",
+    "text": "Choosing a licence is one of the most important first steps in open-sourcing a project. Without one, projects default to the “all rights reserved” model of copyright, where others have no legal right to use, copy, modify, or redistribute your code, even if it is publicly visible on a code repository. Thus, licenses grant others certain legal rights for your code. At the same time, they protect against malpractices or damages caused by bugs by explicitly refusing accountability.\nProcesses for applying a license to CERTH-developed software are presented in the licensing recommendations section. Here we remind that CERTH is the license holder of software produced during research and development activities. Yet, the exact license must be chosen at a per-project basis, given that it must comply with the license of dependent software, and affects how code can be adopted externally. For example, some licenses disallow usage of code in non-open-source projects (see below).\nNext some popular licenses are presented. These are broadly categorized in terms of permissiveness, but compliance between licenses in the same category is not guaranteed. For example, Apache-2.0 can be used within a more permissive BSD-3-Clause project only if Apache-2.0 requirements are maintained. For this reason, you may occasionally encounter mixed-licensed projects, where parts of the codebase are governed by different licenses. That said, most projects try to stick to only one license for simplicity.\n\nPermissive licenses\nExamples: Apache-2.0, BSD-3-Clause, MIT.\nIf you license your code under this type of licence, then anybody can reuse it, modify/combine it with their base, and redistribute the result. They just have to respect basic conditions, such as including your original copyright notice in the software they distribute.\nAmong the freedoms you grant when you use a permissive licence is the freedom to modify your software without needing to distribute it as open source. That is, others (e.g. a company) can create proprietary products based on your code. Most academic works stick to either Apache-2.0 or MIT licenses, as they are the easiest to reuse.\n\n\nWeakly-reciprocal licenses\nExamples: LGPL-3.0, LGPL-2.1, MPL-2.0.\nIf you license your project under this type of licence and somebody takes your source code and combines it with theirs, upon distribution of their code they also have to disclose yours under your license. This includes modifications that they made to your source code. However, they can keep their own sources undisclosed. This way, you can benefit from improvements to your codebase.\nKeep in mind that many licenses treat code reuse and dynamic linking to compiled binaries differently (dynamic linking is the practice of calling external software during runtime while only being aware of the programmatic interface when writing your programs). For example, one may release a proprietary program that links against an LGPL-3.0 library as long as they do not actually redistribute the latter themselves - their program’s users need to install that separately in their system.\n\n\nStrongly-reciprocal licenses\nExamples: GPL-3.0 and GPL-2.0.\nIf you license your project under this type of licence and somebody distributes software that uses your code and combines it with theirs, they need to release the sources of both your code (modified or not) and their code under the same license.\nThe vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well. It is thus often referred to as a “viral” license.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "Due Diligence"
+      "Licensing"
     ]
   },
   {
-    "objectID": "docs/key-concepts/due-diligence.html#introduction-to-due-diligence",
-    "href": "docs/key-concepts/due-diligence.html#introduction-to-due-diligence",
-    "title": "Due Diligence",
+    "objectID": "docs/key-concepts/copyright.html",
+    "href": "docs/key-concepts/copyright.html",
+    "title": "Copyright",
     "section": "",
-    "text": "Due diligence is a legal term describing the process of compliance and risk analysis. In the context of open source, the term is often used in a broader sense, to also consider risks to an organisation’s reputation and liability.\nAt CERTH, due diligence should be performed before open-sourcing a project and revisited as the project evolves.\nThe features of a due diligence analysis depend heavily on the nature of the project, but may include:\n\nIdentifying the authors of the project in order to ascertain the copyright holders.\nDetermining the use and risk of dependencies, to prevent, for instance, the use of unmaintained or otherwise unwanted dependencies for reasons such as licence incompatibility.\nAssessing the security and reputational risks associated with the project, to prevent, for instance, the creation of new attack vectors and their public coverage.\nClearing potential liability concerns, for instance export controls, dual-use concerns, or regulated application domains.\nReviewing the code / design, to prevent, for instance, reputational damage due to publishing something of inadequate quality.\n\nDue diligence features evolve through the lifetime of a project and should be re-assessed on a regular basis.",
+    "text": "Copyright represents a collection of exclusive rights held by creators over their original works, including authority over how their creations are utilised and distributed.\nThe general principles related to copyright are specified in the Berne Convention, an international treaty which has been ratified by the vast majority of countries in the world and whose main purpose is to provide uniformity of copyright and similar rights across the globe.\nBy default, copyright functions under an “all rights reserved” model, restricting others from accessing, copying, modifying, or sharing work without explicit authorisation. Licences serve as the mechanism to grant these permissions.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "Due Diligence"
+      "Copyright"
     ]
   },
   {
-    "objectID": "docs/key-concepts/what-to-expect.html",
-    "href": "docs/key-concepts/what-to-expect.html",
-    "title": "What to Expect",
+    "objectID": "docs/key-concepts/copyright.html#introduction-to-copyright",
+    "href": "docs/key-concepts/copyright.html#introduction-to-copyright",
+    "title": "Copyright",
     "section": "",
-    "text": "Open-sourcing software, and other research outputs comes with benefits and opportunities for contributions, but it also adds expectations from the community. This section gives an overview of common challenges and opportunities when open-sourcing a CERTH project.",
+    "text": "Copyright represents a collection of exclusive rights held by creators over their original works, including authority over how their creations are utilised and distributed.\nThe general principles related to copyright are specified in the Berne Convention, an international treaty which has been ratified by the vast majority of countries in the world and whose main purpose is to provide uniformity of copyright and similar rights across the globe.\nBy default, copyright functions under an “all rights reserved” model, restricting others from accessing, copying, modifying, or sharing work without explicit authorisation. Licences serve as the mechanism to grant these permissions.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "What to Expect"
+      "Copyright"
     ]
   },
   {
-    "objectID": "docs/key-concepts/what-to-expect.html#increased-visibility-and-recognition",
-    "href": "docs/key-concepts/what-to-expect.html#increased-visibility-and-recognition",
-    "title": "What to Expect",
-    "section": "Increased Visibility and Recognition",
-    "text": "Increased Visibility and Recognition\nBy open-sourcing your project, you publish your work for everyone to see and benefit from. This is an opportunity to share your work, collaborate, and engage with users and potential contributors (both inside and outside the academic and research community), and to attract new developers and designers to the project.",
+    "objectID": "docs/key-concepts/copyright.html#copyright-at-certh",
+    "href": "docs/key-concepts/copyright.html#copyright-at-certh",
+    "title": "Copyright",
+    "section": "Copyright at CERTH",
+    "text": "Copyright at CERTH\nAt CERTH, employed personnel (including permanent researchers, engineers, and affiliated staff) typically have the works produced within the scope of their professional activities held by their respective CERTH Institute as the copyright owner, in accordance with Greek employment and intellectual property law.\nBefore publishing any work that incorporates third-party contributions, securing signed agreements or valid licences from the relevant copyright holders is essential. This applies equally to code, documentation, datasets, and design files.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "What to Expect"
+      "Copyright"
     ]
   },
   {
-    "objectID": "docs/key-concepts/what-to-expect.html#maintenance-and-support",
-    "href": "docs/key-concepts/what-to-expect.html#maintenance-and-support",
-    "title": "What to Expect",
-    "section": "Maintenance and Support",
-    "text": "Maintenance and Support\nOnce a project is open source, it is expected to allocate resources for ongoing maintenance and support. This includes addressing bug reports, reviewing and merging contributions, and ensuring the overall health of the project. Especially with contributions from short-term personnel (PhD students, post-docs, project staff), a clear succession plan should be established in case the main contributor leaves CERTH. Content moderation of comments or code contributions may also be required.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "What to Expect"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/what-to-expect.html#use-of-proprietary-tooling",
-    "href": "docs/key-concepts/what-to-expect.html#use-of-proprietary-tooling",
-    "title": "What to Expect",
-    "section": "Use of Proprietary Tooling",
-    "text": "Use of Proprietary Tooling\nSome of the tools used for development or simulation may be proprietary or licence-restricted. People outside CERTH may not have access to these tools, and users may ask for changes in the tooling, libraries, or other components in order to reproduce your work and contribute to the project. It is good to keep these possibilities in mind when estimating the maintenance effort.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "What to Expect"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/what-to-expect.html#evolving-project-direction",
-    "href": "docs/key-concepts/what-to-expect.html#evolving-project-direction",
-    "title": "What to Expect",
-    "section": "Evolving Project Direction",
-    "text": "Evolving Project Direction\nOver time, and especially with multiple contributors, the project may evolve in directions you might not have anticipated. This includes contributions far beyond the originally devised scope, or conflicting contributions. As a project owner or maintainer, you need to balance your own needs with those of the community, and in case of conflicts, remain flexible.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "What to Expect"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/what-to-expect.html#licensing-and-other-legal-considerations",
-    "href": "docs/key-concepts/what-to-expect.html#licensing-and-other-legal-considerations",
-    "title": "What to Expect",
-    "section": "Licensing and Other Legal Considerations",
-    "text": "Licensing and Other Legal Considerations\nOpen-sourcing involves legal considerations. Guidance on important subjects such as licensing and copyright is provided in the Recommendations section.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "What to Expect"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/what-to-expect.html#risks-and-dual-use",
-    "href": "docs/key-concepts/what-to-expect.html#risks-and-dual-use",
-    "title": "What to Expect",
-    "section": "Risks and Dual Use",
-    "text": "Risks and Dual Use\nAs the project is publicly accessible, this could invite scrutiny in terms of copyright, use of other libraries, and general legal risks. This is described in more detail within the Due Diligence section. One specific issue is the possibility of dual use. If the technology of the project could be used in sensitive industries such as defence, we recommend reaching out to the CERTH OSPO to investigate on a per-project basis.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "What to Expect"
-    ]
-  },
-  {
-    "objectID": "docs-gr/recommendations/licensing.html",
-    "href": "docs-gr/recommendations/licensing.html",
-    "title": "Αδειοδότηση",
+    "objectID": "docs-gr/index.html",
+    "href": "docs-gr/index.html",
+    "title": "Τεχνική Τεκμηρίωση",
     "section": "",
-    "text": "Οι δεσμεύσεις Ανοιχτής Επιστήμης του ΕΚΕΤΑ, εναρμονισμένες με τον Ευρωπαϊκό Χώρο Ανοιχτής Επιστήμης (EOSC) και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, όπου αυτό είναι δυνατό.\nΗ επιλογή άδειας πρέπει να περιλαμβάνει διαβούλευση με το OSPO ΕΚΕΤΑ. Κατά την επιλογή άδειας, λάβετε υπόψη:\n\nΚοινοτικές νόρμες στο οικοσύστημά σας\nΠοιο καθεστώς διανομής (permissive, weakly-reciprocal, or strongly-reciprocal) ευθυγραμμίζεται με τους στόχους του έργου σας (βλ. Βασικές έννοιες: Αδειοδότηση)\nΥποχρεώσεις που επιβάλλει ο χρηματοδότης σας ή η συμφωνία κοινοπραξίας",
+    "text": "Είστε ερευνητής ή προγραμματιστής στο ΕΚΕΤΑ και σκέφτεστε να εισέλθετε στον κόσμο του ανοιχτού κώδικα; Έχετε απορίες σχετικά με το λογισμικό ανοιχτού κώδικα;\nΗ παρούσα τεκμηρίωση καλύπτει τα βασικά θέματα που χρειάζεται να γνωρίζετε για την ανάπτυξη ενός έργου ανοιχτού κώδικα στο ΕΚΕΤΑ: πνευματικά δικαιώματα, αδειοδότηση, δέουσα επιμέλεια και βέλτιστες πρακτικές.",
+    "crumbs": [
+      "CERTH OSPO Τεχνική Τεκμηρίωση"
+    ]
+  },
+  {
+    "objectID": "docs-gr/recommendations/copyright.html",
+    "href": "docs-gr/recommendations/copyright.html",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "",
+    "text": "Κατά την έκδοση λογισμικού στο ΕΚΕΤΑ, κάθε αρχείο πρέπει να φέρει σύντομη, αναγνώσιμη από μηχανή ειδοποίηση πνευματικών δικαιωμάτων και άδειας χρήσης. Το OSPO ΕΚΕΤΑ ακολουθεί την προδιαγραφή REUSE ως προτεινόμενο πρότυπο, το οποίο υποστηρίζεται επίσης από την FSFE και υιοθετείται ευρέως στα ευρωπαϊκά έργα ανοιχτού κώδικα.\nΓια τις βασικές έννοιες, δείτε Πνευματικά Δικαιώματα και Αδειοδότηση.",
     "crumbs": [
       "Συστάσεις",
-      "Αδειοδότηση"
+      "Πνευματικά Δικαιώματα"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/licensing.html#επισκόπηση",
-    "href": "docs-gr/recommendations/licensing.html#επισκόπηση",
-    "title": "Αδειοδότηση",
+    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων-και-αδειών-χρήσης",
+    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων-και-αδειών-χρήσης",
+    "title": "Πνευματικά Δικαιώματα",
     "section": "",
-    "text": "Οι δεσμεύσεις Ανοιχτής Επιστήμης του ΕΚΕΤΑ, εναρμονισμένες με τον Ευρωπαϊκό Χώρο Ανοιχτής Επιστήμης (EOSC) και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, όπου αυτό είναι δυνατό.\nΗ επιλογή άδειας πρέπει να περιλαμβάνει διαβούλευση με το OSPO ΕΚΕΤΑ. Κατά την επιλογή άδειας, λάβετε υπόψη:\n\nΚοινοτικές νόρμες στο οικοσύστημά σας\nΠοιο καθεστώς διανομής (permissive, weakly-reciprocal, or strongly-reciprocal) ευθυγραμμίζεται με τους στόχους του έργου σας (βλ. Βασικές έννοιες: Αδειοδότηση)\nΥποχρεώσεις που επιβάλλει ο χρηματοδότης σας ή η συμφωνία κοινοπραξίας",
+    "text": "Κατά την έκδοση λογισμικού στο ΕΚΕΤΑ, κάθε αρχείο πρέπει να φέρει σύντομη, αναγνώσιμη από μηχανή ειδοποίηση πνευματικών δικαιωμάτων και άδειας χρήσης. Το OSPO ΕΚΕΤΑ ακολουθεί την προδιαγραφή REUSE ως προτεινόμενο πρότυπο, το οποίο υποστηρίζεται επίσης από την FSFE και υιοθετείται ευρέως στα ευρωπαϊκά έργα ανοιχτού κώδικα.\nΓια τις βασικές έννοιες, δείτε Πνευματικά Δικαιώματα και Αδειοδότηση.",
     "crumbs": [
       "Συστάσεις",
-      "Αδειοδότηση"
+      "Πνευματικά Δικαιώματα"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/licensing.html#αδειοδότηση-λογισμικού",
-    "href": "docs-gr/recommendations/licensing.html#αδειοδότηση-λογισμικού",
-    "title": "Αδειοδότηση",
-    "section": "Αδειοδότηση Λογισμικού",
-    "text": "Αδειοδότηση Λογισμικού\nΧρησιμοποιήστε άδεια εγκεκριμένη από το Open Source Initiative (OSI) για λογισμικό με πνευματικά δικαιώματα ΕΚΕΤΑ. Συνηθισμένες επιλογές:\n\n\n\n\n\n\n\n\nΆδεια\nΤύπος\nΤυπική περίπτωση χρήσης\n\n\n\n\nApache-2.0\nPermissive\nΓενικό λογισμικό· μέγιστη υιοθέτηση· περιλαμβάνει εκχώρηση διπλωμάτων ευρεσιτεχνίας\n\n\nMIT\nPermissive\nΜικρά βοηθητικά προγράμματα και βιβλιοθήκες· ελάχιστες απαιτήσεις\n\n\nGPL-3.0\nStrongly reciprocal\nΕργαλεία όπου όλα τα παράγωγα πρέπει να παραμείνουν ανοιχτού κώδικα\n\n\nLGPL-3.0\nWeakly reciprocal\nΒιβλιοθήκες που προορίζονται για σύνδεση από ιδιόκτητο λογισμικό",
+    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων",
+    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "Ειδοποιήσεις Πνευματικών Δικαιωμάτων",
+    "text": "Ειδοποιήσεις Πνευματικών Δικαιωμάτων\nΜια ειδοποίηση πνευματικών δικαιωμάτων καθορίζει εν συντομία την κυριότητα και το χρονικό πλαίσιο δημιουργίας. Προσδιορίζει τον κάτοχο πνευματικών δικαιωμάτων και το έτος δημιουργίας του συγκεκριμένου αρχείου.\nΜορφότυπος:\nSPDX-FileCopyrightText: &lt;έτος&gt; &lt;κάτοχος πνευματικών δικαιωμάτων&gt;\nΠαράδειγμα:\nSPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\nΧρειάζεται να συμπεριληφθεί μόνο το αρχικό έτος δημιουργίας. Διαδοχικά έτη ή εύρη δεν είναι απαραίτητα, εκτός εάν το αρχείο έχει αναθεωρηθεί ουσιαστικά από διαφορετικό συνεισφέροντα:\nSPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\nSPDX-FileCopyrightText: 2025 Όνομα Συνεισφέροντα, Φορέας",
     "crumbs": [
       "Συστάσεις",
-      "Αδειοδότηση"
+      "Πνευματικά Δικαιώματα"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/licensing.html#συμβατότητα-αδειών",
-    "href": "docs-gr/recommendations/licensing.html#συμβατότητα-αδειών",
-    "title": "Αδειοδότηση",
-    "section": "Συμβατότητα Αδειών",
-    "text": "Συμβατότητα Αδειών\nΚατά τον συνδυασμό στοιχείων υπό διαφορετικές άδειες, πρέπει να επαληθεύεται η συμβατότητα πριν από την κυκλοφορία. Αυτό αποτελεί μέρος της δέουσας επιμέλειας (βλ. Βασικές έννοιες: Δέουσα Επιμέλεια).\nΈνας συνηθισμένος πίνακας συμβατότητας:\n\n\n\n\n\n\n\n\n\nΘέλετε να χρησιμοποιήσετε…\nΥπό Apache-2.0\nΥπό MIT\nΥπό GPL-3.0\n\n\n\n\nΚώδικα Apache-2.0\n✓\n✓\n✓\n\n\nΚώδικα MIT\n✓\n✓\n✓\n\n\nΚώδικα GPL-3.0\nΜόνο εάν το έργο σας είναι επίσης GPL-3.0\nΜόνο εάν το έργο σας είναι επίσης GPL-3.0\n✓\n\n\nΒιβλιοθήκη LGPL-3.0\n✓ (δυναμική σύνδεση)\n✓ (δυναμική σύνδεση)\n✓",
+    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-άδειας-χρήσης",
+    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-άδειας-χρήσης",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "Ειδοποιήσεις Άδειας Χρήσης",
+    "text": "Ειδοποιήσεις Άδειας Χρήσης\nΜια ειδοποίηση άδειας χρήσης δηλώνει τον αναγνωριστικό κωδικό SPDX της άδειας που διέπει το αρχείο.\nΜορφότυπος:\nSPDX-License-Identifier: &lt;αναγνωριστικό-SPDX&gt;\nΠλήρες παράδειγμα για αρχείο Python με άδεια Apache-2.0:\n# SPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\n# SPDX-License-Identifier: Apache-2.0\nΑυτός ο μορφότυπος αναγνώσιμος από μηχανή επιτρέπει αυτοματοποιημένη επαλήθευση συμμόρφωσης αδειών από εργαλεία όπως το reuse lint.",
     "crumbs": [
       "Συστάσεις",
-      "Αδειοδότηση"
+      "Πνευματικά Δικαιώματα"
+    ]
+  },
+  {
+    "objectID": "docs-gr/recommendations/copyright.html#τοποθέτηση-στα-αρχεία-πηγαίου-κώδικα",
+    "href": "docs-gr/recommendations/copyright.html#τοποθέτηση-στα-αρχεία-πηγαίου-κώδικα",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "Τοποθέτηση στα Αρχεία Πηγαίου Κώδικα",
+    "text": "Τοποθέτηση στα Αρχεία Πηγαίου Κώδικα\nΤοποθετήστε τις ετικέτες SPDX σε ένα μπλοκ σχολίων στην κορυφή κάθε αρχείου πηγαίου κώδικα, πριν από οποιοδήποτε άλλο περιεχόμενο. Για μορφότυπους αρχείων που δεν υποστηρίζουν ενσωματωμένα σχόλια (π.χ. εικόνες, δυαδικά αρχεία ή άλλα δεδομένα που διανέμονται μαζί με το λογισμικό), χρησιμοποιήστε ένα συνοδευτικό αρχείο .license με το ίδιο βασικό όνομα:\nmy-asset.svg          ← το στοιχείο\nmy-asset.svg.license  ← περιέχει τις ετικέτες SPDX",
+    "crumbs": [
+      "Συστάσεις",
+      "Πνευματικά Δικαιώματα"
+    ]
+  },
+  {
+    "objectID": "docs-gr/recommendations/copyright.html#μαζική-τεκμηρίωση-αδειών",
+    "href": "docs-gr/recommendations/copyright.html#μαζική-τεκμηρίωση-αδειών",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "Μαζική Τεκμηρίωση Αδειών",
+    "text": "Μαζική Τεκμηρίωση Αδειών\nΠέραν των ειδοποιήσεων ανά αρχείο, κάθε έργο πρέπει να περιλαμβάνει:\n\nΈναν κατάλογο LICENSES/ στη ρίζα του αποθετηρίου, που να περιέχει το πλήρες κείμενο κάθε χρησιμοποιούμενης άδειας (π.χ. LICENSES/Apache-2.0.txt)\nΈνα αρχείο REUSE.toml (ή το παλαιό .reuse/dep5) για αρχεία που δεν μπορούν να φέρουν ενσωματωμένες ειδοποιήσεις",
+    "crumbs": [
+      "Συστάσεις",
+      "Πνευματικά Δικαιώματα"
+    ]
+  },
+  {
+    "objectID": "docs-gr/recommendations/copyright.html#επαλήθευση-συμμόρφωσης",
+    "href": "docs-gr/recommendations/copyright.html#επαλήθευση-συμμόρφωσης",
+    "title": "Πνευματικά Δικαιώματα",
+    "section": "Επαλήθευση Συμμόρφωσης",
+    "text": "Επαλήθευση Συμμόρφωσης\nΕκτελέστε τον ελεγκτή REUSE τοπικά πριν από τη δημοσίευση:\npip install reuse\nreuse lint\nΈνα επιτυχές reuse lint επιβεβαιώνει ότι κάθε αρχείο στο αποθετήριο διαθέτει σαφή κάτοχο πνευματικών δικαιωμάτων και άδεια χρήσης. Το OSPO ΕΚΕΤΑ μπορεί να βοηθήσει με την αρχική ρύθμιση και την ερμηνεία των αποτελεσμάτων.",
+    "crumbs": [
+      "Συστάσεις",
+      "Πνευματικά Δικαιώματα"
+    ]
+  },
+  {
+    "objectID": "docs-gr/submit-software.html",
+    "href": "docs-gr/submit-software.html",
+    "title": "Υποβάλετε το Λογισμικό σας",
+    "section": "",
+    "text": "Το CERTH OSPO διατηρεί έναν κατάλογο ανοικτού κώδικα λογισμικού που αναπτύχθηκε στο CERTH. Αν έχετε ένα έργο που θέλετε να συμπεριληφθεί, υποβάλετέ το μέσω της παρακάτω φόρμας. Οι υποβολές ελέγχονται χειροκίνητα από την ομάδα OSPO πριν προστεθούν στον κατάλογο.",
+    "crumbs": [
+      "Υποβολή Λογισμικού",
+      "Υποβάλετε το Λογισμικό σας"
+    ]
+  },
+  {
+    "objectID": "docs-gr/submit-software.html#πώς-λειτουργεί",
+    "href": "docs-gr/submit-software.html#πώς-λειτουργεί",
+    "title": "Υποβάλετε το Λογισμικό σας",
+    "section": "Πώς Λειτουργεί",
+    "text": "Πώς Λειτουργεί\n\nΣυμπληρώστε τη φόρμα: δώστε βασικές πληροφορίες για το έργο σας.\nΧειροκίνητος έλεγχος: η ομάδα OSPO εξετάζει την υποβολή για να επαληθεύσει ότι πληροί τις ελάχιστες απαιτήσεις δημοσίευσης ανοικτού κώδικα.\nΕνσωμάτωση στον κατάλογο: τα εγκεκριμένα έργα προστίθενται στον κατάλογο λογισμικού του CERTH.",
+    "crumbs": [
+      "Υποβολή Λογισμικού",
+      "Υποβάλετε το Λογισμικό σας"
+    ]
+  },
+  {
+    "objectID": "docs-gr/submit-software.html#υποβολή",
+    "href": "docs-gr/submit-software.html#υποβολή",
+    "title": "Υποβάλετε το Λογισμικό σας",
+    "section": "Υποβολή",
+    "text": "Υποβολή\n\n  Φόρτωση φόρμας...\n\nΑν η φόρμα δεν φορτώνει, ανοίξτε την απευθείας: Φόρμα Υποβολής Λογισμικού",
+    "crumbs": [
+      "Υποβολή Λογισμικού",
+      "Υποβάλετε το Λογισμικό σας"
     ]
   },
   {
@@ -447,138 +463,191 @@
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/copyright.html",
-    "href": "docs-gr/recommendations/copyright.html",
-    "title": "Πνευματικά Δικαιώματα",
+    "objectID": "docs-gr/recommendations/licensing.html",
+    "href": "docs-gr/recommendations/licensing.html",
+    "title": "Αδειοδότηση",
     "section": "",
-    "text": "Κατά την έκδοση λογισμικού στο ΕΚΕΤΑ, κάθε αρχείο πρέπει να φέρει σύντομη, αναγνώσιμη από μηχανή ειδοποίηση πνευματικών δικαιωμάτων και άδειας χρήσης. Το OSPO ΕΚΕΤΑ ακολουθεί την προδιαγραφή REUSE ως προτεινόμενο πρότυπο, το οποίο υποστηρίζεται επίσης από την FSFE και υιοθετείται ευρέως στα ευρωπαϊκά έργα ανοιχτού κώδικα.\nΓια τις βασικές έννοιες, δείτε Πνευματικά Δικαιώματα και Αδειοδότηση.",
+    "text": "Οι δεσμεύσεις Ανοιχτής Επιστήμης του ΕΚΕΤΑ, εναρμονισμένες με τον Ευρωπαϊκό Χώρο Ανοιχτής Επιστήμης (EOSC) και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, όπου αυτό είναι δυνατό.\nΗ επιλογή άδειας πρέπει να περιλαμβάνει διαβούλευση με το OSPO ΕΚΕΤΑ. Κατά την επιλογή άδειας, λάβετε υπόψη:\n\nΚοινοτικές νόρμες στο οικοσύστημά σας\nΠοιο καθεστώς διανομής (permissive, weakly-reciprocal, or strongly-reciprocal) ευθυγραμμίζεται με τους στόχους του έργου σας (βλ. Βασικές έννοιες: Αδειοδότηση)\nΥποχρεώσεις που επιβάλλει ο χρηματοδότης σας ή η συμφωνία κοινοπραξίας",
     "crumbs": [
       "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
+      "Αδειοδότηση"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων-και-αδειών-χρήσης",
-    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων-και-αδειών-χρήσης",
-    "title": "Πνευματικά Δικαιώματα",
+    "objectID": "docs-gr/recommendations/licensing.html#επισκόπηση",
+    "href": "docs-gr/recommendations/licensing.html#επισκόπηση",
+    "title": "Αδειοδότηση",
     "section": "",
-    "text": "Κατά την έκδοση λογισμικού στο ΕΚΕΤΑ, κάθε αρχείο πρέπει να φέρει σύντομη, αναγνώσιμη από μηχανή ειδοποίηση πνευματικών δικαιωμάτων και άδειας χρήσης. Το OSPO ΕΚΕΤΑ ακολουθεί την προδιαγραφή REUSE ως προτεινόμενο πρότυπο, το οποίο υποστηρίζεται επίσης από την FSFE και υιοθετείται ευρέως στα ευρωπαϊκά έργα ανοιχτού κώδικα.\nΓια τις βασικές έννοιες, δείτε Πνευματικά Δικαιώματα και Αδειοδότηση.",
+    "text": "Οι δεσμεύσεις Ανοιχτής Επιστήμης του ΕΚΕΤΑ, εναρμονισμένες με τον Ευρωπαϊκό Χώρο Ανοιχτής Επιστήμης (EOSC) και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, όπου αυτό είναι δυνατό.\nΗ επιλογή άδειας πρέπει να περιλαμβάνει διαβούλευση με το OSPO ΕΚΕΤΑ. Κατά την επιλογή άδειας, λάβετε υπόψη:\n\nΚοινοτικές νόρμες στο οικοσύστημά σας\nΠοιο καθεστώς διανομής (permissive, weakly-reciprocal, or strongly-reciprocal) ευθυγραμμίζεται με τους στόχους του έργου σας (βλ. Βασικές έννοιες: Αδειοδότηση)\nΥποχρεώσεις που επιβάλλει ο χρηματοδότης σας ή η συμφωνία κοινοπραξίας",
     "crumbs": [
       "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
+      "Αδειοδότηση"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων",
-    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-πνευματικών-δικαιωμάτων",
-    "title": "Πνευματικά Δικαιώματα",
-    "section": "Ειδοποιήσεις Πνευματικών Δικαιωμάτων",
-    "text": "Ειδοποιήσεις Πνευματικών Δικαιωμάτων\nΜια ειδοποίηση πνευματικών δικαιωμάτων καθορίζει εν συντομία την κυριότητα και το χρονικό πλαίσιο δημιουργίας. Προσδιορίζει τον κάτοχο πνευματικών δικαιωμάτων και το έτος δημιουργίας του συγκεκριμένου αρχείου.\nΜορφότυπος:\nSPDX-FileCopyrightText: &lt;έτος&gt; &lt;κάτοχος πνευματικών δικαιωμάτων&gt;\nΠαράδειγμα:\nSPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\nΧρειάζεται να συμπεριληφθεί μόνο το αρχικό έτος δημιουργίας. Διαδοχικά έτη ή εύρη δεν είναι απαραίτητα, εκτός εάν το αρχείο έχει αναθεωρηθεί ουσιαστικά από διαφορετικό συνεισφέροντα:\nSPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\nSPDX-FileCopyrightText: 2025 Όνομα Συνεισφέροντα, Φορέας",
+    "objectID": "docs-gr/recommendations/licensing.html#αδειοδότηση-λογισμικού",
+    "href": "docs-gr/recommendations/licensing.html#αδειοδότηση-λογισμικού",
+    "title": "Αδειοδότηση",
+    "section": "Αδειοδότηση Λογισμικού",
+    "text": "Αδειοδότηση Λογισμικού\nΧρησιμοποιήστε άδεια εγκεκριμένη από το Open Source Initiative (OSI) για λογισμικό με πνευματικά δικαιώματα ΕΚΕΤΑ. Συνηθισμένες επιλογές:\n\n\n\n\n\n\n\n\nΆδεια\nΤύπος\nΤυπική περίπτωση χρήσης\n\n\n\n\nApache-2.0\nPermissive\nΓενικό λογισμικό· μέγιστη υιοθέτηση· περιλαμβάνει εκχώρηση διπλωμάτων ευρεσιτεχνίας\n\n\nMIT\nPermissive\nΜικρά βοηθητικά προγράμματα και βιβλιοθήκες· ελάχιστες απαιτήσεις\n\n\nGPL-3.0\nStrongly reciprocal\nΕργαλεία όπου όλα τα παράγωγα πρέπει να παραμείνουν ανοιχτού κώδικα\n\n\nLGPL-3.0\nWeakly reciprocal\nΒιβλιοθήκες που προορίζονται για σύνδεση από ιδιόκτητο λογισμικό",
     "crumbs": [
       "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
+      "Αδειοδότηση"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-άδειας-χρήσης",
-    "href": "docs-gr/recommendations/copyright.html#ειδοποιήσεις-άδειας-χρήσης",
-    "title": "Πνευματικά Δικαιώματα",
-    "section": "Ειδοποιήσεις Άδειας Χρήσης",
-    "text": "Ειδοποιήσεις Άδειας Χρήσης\nΜια ειδοποίηση άδειας χρήσης δηλώνει τον αναγνωριστικό κωδικό SPDX της άδειας που διέπει το αρχείο.\nΜορφότυπος:\nSPDX-License-Identifier: &lt;αναγνωριστικό-SPDX&gt;\nΠλήρες παράδειγμα για αρχείο Python με άδεια Apache-2.0:\n# SPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)\n# SPDX-License-Identifier: Apache-2.0\nΑυτός ο μορφότυπος αναγνώσιμος από μηχανή επιτρέπει αυτοματοποιημένη επαλήθευση συμμόρφωσης αδειών από εργαλεία όπως το reuse lint.",
+    "objectID": "docs-gr/recommendations/licensing.html#συμβατότητα-αδειών",
+    "href": "docs-gr/recommendations/licensing.html#συμβατότητα-αδειών",
+    "title": "Αδειοδότηση",
+    "section": "Συμβατότητα Αδειών",
+    "text": "Συμβατότητα Αδειών\nΚατά τον συνδυασμό στοιχείων υπό διαφορετικές άδειες, πρέπει να επαληθεύεται η συμβατότητα πριν από την κυκλοφορία. Αυτό αποτελεί μέρος της δέουσας επιμέλειας (βλ. Βασικές έννοιες: Δέουσα Επιμέλεια).\nΈνας συνηθισμένος πίνακας συμβατότητας:\n\n\n\n\n\n\n\n\n\nΘέλετε να χρησιμοποιήσετε…\nΥπό Apache-2.0\nΥπό MIT\nΥπό GPL-3.0\n\n\n\n\nΚώδικα Apache-2.0\n✓\n✓\n✓\n\n\nΚώδικα MIT\n✓\n✓\n✓\n\n\nΚώδικα GPL-3.0\nΜόνο εάν το έργο σας είναι επίσης GPL-3.0\nΜόνο εάν το έργο σας είναι επίσης GPL-3.0\n✓\n\n\nΒιβλιοθήκη LGPL-3.0\n✓ (δυναμική σύνδεση)\n✓ (δυναμική σύνδεση)\n✓",
     "crumbs": [
       "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
+      "Αδειοδότηση"
     ]
   },
   {
-    "objectID": "docs-gr/recommendations/copyright.html#τοποθέτηση-στα-αρχεία-πηγαίου-κώδικα",
-    "href": "docs-gr/recommendations/copyright.html#τοποθέτηση-στα-αρχεία-πηγαίου-κώδικα",
-    "title": "Πνευματικά Δικαιώματα",
-    "section": "Τοποθέτηση στα Αρχεία Πηγαίου Κώδικα",
-    "text": "Τοποθέτηση στα Αρχεία Πηγαίου Κώδικα\nΤοποθετήστε τις ετικέτες SPDX σε ένα μπλοκ σχολίων στην κορυφή κάθε αρχείου πηγαίου κώδικα, πριν από οποιοδήποτε άλλο περιεχόμενο. Για μορφότυπους αρχείων που δεν υποστηρίζουν ενσωματωμένα σχόλια (π.χ. εικόνες, δυαδικά αρχεία ή άλλα δεδομένα που διανέμονται μαζί με το λογισμικό), χρησιμοποιήστε ένα συνοδευτικό αρχείο .license με το ίδιο βασικό όνομα:\nmy-asset.svg          ← το στοιχείο\nmy-asset.svg.license  ← περιέχει τις ετικέτες SPDX",
-    "crumbs": [
-      "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
-    ]
-  },
-  {
-    "objectID": "docs-gr/recommendations/copyright.html#μαζική-τεκμηρίωση-αδειών",
-    "href": "docs-gr/recommendations/copyright.html#μαζική-τεκμηρίωση-αδειών",
-    "title": "Πνευματικά Δικαιώματα",
-    "section": "Μαζική Τεκμηρίωση Αδειών",
-    "text": "Μαζική Τεκμηρίωση Αδειών\nΠέραν των ειδοποιήσεων ανά αρχείο, κάθε έργο πρέπει να περιλαμβάνει:\n\nΈναν κατάλογο LICENSES/ στη ρίζα του αποθετηρίου, που να περιέχει το πλήρες κείμενο κάθε χρησιμοποιούμενης άδειας (π.χ. LICENSES/Apache-2.0.txt)\nΈνα αρχείο REUSE.toml (ή το παλαιό .reuse/dep5) για αρχεία που δεν μπορούν να φέρουν ενσωματωμένες ειδοποιήσεις",
-    "crumbs": [
-      "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
-    ]
-  },
-  {
-    "objectID": "docs-gr/recommendations/copyright.html#επαλήθευση-συμμόρφωσης",
-    "href": "docs-gr/recommendations/copyright.html#επαλήθευση-συμμόρφωσης",
-    "title": "Πνευματικά Δικαιώματα",
-    "section": "Επαλήθευση Συμμόρφωσης",
-    "text": "Επαλήθευση Συμμόρφωσης\nΕκτελέστε τον ελεγκτή REUSE τοπικά πριν από τη δημοσίευση:\npip install reuse\nreuse lint\nΈνα επιτυχές reuse lint επιβεβαιώνει ότι κάθε αρχείο στο αποθετήριο διαθέτει σαφή κάτοχο πνευματικών δικαιωμάτων και άδεια χρήσης. Το OSPO ΕΚΕΤΑ μπορεί να βοηθήσει με την αρχική ρύθμιση και την ερμηνεία των αποτελεσμάτων.",
-    "crumbs": [
-      "Συστάσεις",
-      "Πνευματικά Δικαιώματα"
-    ]
-  },
-  {
-    "objectID": "docs-gr/index.html",
-    "href": "docs-gr/index.html",
-    "title": "Τεχνική Τεκμηρίωση",
+    "objectID": "docs/key-concepts/what-to-expect.html",
+    "href": "docs/key-concepts/what-to-expect.html",
+    "title": "What to Expect",
     "section": "",
-    "text": "Είστε ερευνητής ή προγραμματιστής στο ΕΚΕΤΑ και σκέφτεστε να εισέλθετε στον κόσμο του ανοιχτού κώδικα; Έχετε απορίες σχετικά με το λογισμικό ανοιχτού κώδικα;\nΗ παρούσα τεκμηρίωση καλύπτει τα βασικά θέματα που χρειάζεται να γνωρίζετε για την ανάπτυξη ενός έργου ανοιχτού κώδικα στο ΕΚΕΤΑ: πνευματικά δικαιώματα, αδειοδότηση, δέουσα επιμέλεια και βέλτιστες πρακτικές.",
-    "crumbs": [
-      "CERTH OSPO Τεχνική Τεκμηρίωση"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/copyright.html",
-    "href": "docs/key-concepts/copyright.html",
-    "title": "Copyright",
-    "section": "",
-    "text": "Copyright represents a collection of exclusive rights held by creators over their original works, including authority over how their creations are utilised and distributed.\nThe general principles related to copyright are specified in the Berne Convention, an international treaty which has been ratified by the vast majority of countries in the world and whose main purpose is to provide uniformity of copyright and similar rights across the globe.\nBy default, copyright functions under an “all rights reserved” model, restricting others from accessing, copying, modifying, or sharing work without explicit authorisation. Licences serve as the mechanism to grant these permissions.",
+    "text": "Open-sourcing software, and other research outputs comes with benefits and opportunities for contributions, but it also adds expectations from the community. This section gives an overview of common challenges and opportunities when open-sourcing a CERTH project.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "Copyright"
+      "What to Expect"
     ]
   },
   {
-    "objectID": "docs/key-concepts/copyright.html#introduction-to-copyright",
-    "href": "docs/key-concepts/copyright.html#introduction-to-copyright",
-    "title": "Copyright",
+    "objectID": "docs/key-concepts/what-to-expect.html#increased-visibility-and-recognition",
+    "href": "docs/key-concepts/what-to-expect.html#increased-visibility-and-recognition",
+    "title": "What to Expect",
+    "section": "Increased Visibility and Recognition",
+    "text": "Increased Visibility and Recognition\nBy open-sourcing your project, you publish your work for everyone to see and benefit from. This is an opportunity to share your work, collaborate, and engage with users and potential contributors (both inside and outside the academic and research community), and to attract new developers and designers to the project.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/what-to-expect.html#maintenance-and-support",
+    "href": "docs/key-concepts/what-to-expect.html#maintenance-and-support",
+    "title": "What to Expect",
+    "section": "Maintenance and Support",
+    "text": "Maintenance and Support\nOnce a project is open source, it is expected to allocate resources for ongoing maintenance and support. This includes addressing bug reports, reviewing and merging contributions, and ensuring the overall health of the project. Especially with contributions from short-term personnel (PhD students, post-docs, project staff), a clear succession plan should be established in case the main contributor leaves CERTH. Content moderation of comments or code contributions may also be required.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/what-to-expect.html#use-of-proprietary-tooling",
+    "href": "docs/key-concepts/what-to-expect.html#use-of-proprietary-tooling",
+    "title": "What to Expect",
+    "section": "Use of Proprietary Tooling",
+    "text": "Use of Proprietary Tooling\nSome of the tools used for development or simulation may be proprietary or licence-restricted. People outside CERTH may not have access to these tools, and users may ask for changes in the tooling, libraries, or other components in order to reproduce your work and contribute to the project. It is good to keep these possibilities in mind when estimating the maintenance effort.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/what-to-expect.html#evolving-project-direction",
+    "href": "docs/key-concepts/what-to-expect.html#evolving-project-direction",
+    "title": "What to Expect",
+    "section": "Evolving Project Direction",
+    "text": "Evolving Project Direction\nOver time, and especially with multiple contributors, the project may evolve in directions you might not have anticipated. This includes contributions far beyond the originally devised scope, or conflicting contributions. As a project owner or maintainer, you need to balance your own needs with those of the community, and in case of conflicts, remain flexible.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/what-to-expect.html#licensing-and-other-legal-considerations",
+    "href": "docs/key-concepts/what-to-expect.html#licensing-and-other-legal-considerations",
+    "title": "What to Expect",
+    "section": "Licensing and Other Legal Considerations",
+    "text": "Licensing and Other Legal Considerations\nOpen-sourcing involves legal considerations. Guidance on important subjects such as licensing and copyright is provided in the Recommendations section.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/what-to-expect.html#risks-and-dual-use",
+    "href": "docs/key-concepts/what-to-expect.html#risks-and-dual-use",
+    "title": "What to Expect",
+    "section": "Risks and Dual Use",
+    "text": "Risks and Dual Use\nAs the project is publicly accessible, this could invite scrutiny in terms of copyright, use of other libraries, and general legal risks. This is described in more detail within the Due Diligence section. One specific issue is the possibility of dual use. If the technology of the project could be used in sensitive industries such as defence, we recommend reaching out to the CERTH OSPO to investigate on a per-project basis.",
+    "crumbs": [
+      "Technical Documentation",
+      "Key Concepts",
+      "What to Expect"
+    ]
+  },
+  {
+    "objectID": "docs/key-concepts/due-diligence.html",
+    "href": "docs/key-concepts/due-diligence.html",
+    "title": "Due Diligence",
     "section": "",
-    "text": "Copyright represents a collection of exclusive rights held by creators over their original works, including authority over how their creations are utilised and distributed.\nThe general principles related to copyright are specified in the Berne Convention, an international treaty which has been ratified by the vast majority of countries in the world and whose main purpose is to provide uniformity of copyright and similar rights across the globe.\nBy default, copyright functions under an “all rights reserved” model, restricting others from accessing, copying, modifying, or sharing work without explicit authorisation. Licences serve as the mechanism to grant these permissions.",
+    "text": "Due diligence is a legal term describing the process of compliance and risk analysis. In the context of open source, the term is often used in a broader sense, to also consider risks to an organisation’s reputation and liability.\nAt CERTH, due diligence should be performed before open-sourcing a project and revisited as the project evolves.\nThe features of a due diligence analysis depend heavily on the nature of the project, but may include:\n\nIdentifying the authors of the project in order to ascertain the copyright holders.\nDetermining the use and risk of dependencies, to prevent, for instance, the use of unmaintained or otherwise unwanted dependencies for reasons such as licence incompatibility.\nAssessing the security and reputational risks associated with the project, to prevent, for instance, the creation of new attack vectors and their public coverage.\nClearing potential liability concerns, for instance export controls, dual-use concerns, or regulated application domains.\nReviewing the code / design, to prevent, for instance, reputational damage due to publishing something of inadequate quality.\n\nDue diligence features evolve through the lifetime of a project and should be re-assessed on a regular basis.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "Copyright"
+      "Due Diligence"
     ]
   },
   {
-    "objectID": "docs/key-concepts/copyright.html#copyright-at-certh",
-    "href": "docs/key-concepts/copyright.html#copyright-at-certh",
-    "title": "Copyright",
-    "section": "Copyright at CERTH",
-    "text": "Copyright at CERTH\nAt CERTH, employed personnel (including permanent researchers, engineers, and affiliated staff) typically have the works produced within the scope of their professional activities held by their respective CERTH Institute as the copyright owner, in accordance with Greek employment and intellectual property law.\nBefore publishing any work that incorporates third-party contributions, securing signed agreements or valid licences from the relevant copyright holders is essential. This applies equally to code, documentation, datasets, and design files.",
-    "crumbs": [
-      "Technical Documentation",
-      "Key Concepts",
-      "Copyright"
-    ]
-  },
-  {
-    "objectID": "docs/key-concepts/licensing.html",
-    "href": "docs/key-concepts/licensing.html",
-    "title": "Licensing",
+    "objectID": "docs/key-concepts/due-diligence.html#introduction-to-due-diligence",
+    "href": "docs/key-concepts/due-diligence.html#introduction-to-due-diligence",
+    "title": "Due Diligence",
     "section": "",
-    "text": "Choosing a licence is one of the most important first steps in open-sourcing a project. Without one, projects default to the “all rights reserved” model of copyright, where others have no legal right to use, copy, modify, or redistribute your code, even if it is publicly visible on a code repository. Thus, licenses grant others certain legal rights for your code. At the same time, they protect against malpractices or damages caused by bugs by explicitly refusing accountability.\nProcesses for applying a license to CERTH-developed software are presented in the licensing recommendations section. Here we remind that CERTH is the license holder of software produced during research and development activities. Yet, the exact license must be chosen at a per-project basis, given that it must comply with the license of dependent software, and affects how code can be adopted externally. For example, some licenses disallow usage of code in non-open-source projects (see below).\nNext some popular licenses are presented. These are broadly categorized in terms of permissiveness, but compliance between licenses in the same category is not guaranteed. For example, Apache-2.0 can be used within a more permissive BSD-3-Clause project only if Apache-2.0 requirements are maintained. For this reason, you may occasionally encounter mixed-licensed projects, where parts of the codebase are governed by different licenses. That said, most projects try to stick to only one license for simplicity.\n\nPermissive licenses\nExamples: Apache-2.0, BSD-3-Clause, MIT.\nIf you license your code under this type of licence, then anybody can reuse it, modify/combine it with their base, and redistribute the result. They just have to respect basic conditions, such as including your original copyright notice in the software they distribute.\nAmong the freedoms you grant when you use a permissive licence is the freedom to modify your software without needing to distribute it as open source. That is, others (e.g. a company) can create proprietary products based on your code. Most academic works stick to either Apache-2.0 or MIT licenses, as they are the easiest to reuse.\n\n\nWeakly-reciprocal licenses\nExamples: LGPL-3.0, LGPL-2.1, MPL-2.0.\nIf you license your project under this type of licence and somebody takes your source code and combines it with theirs, upon distribution of their code they also have to disclose yours under your license. This includes modifications that they made to your source code. However, they can keep their own sources undisclosed. This way, you can benefit from improvements to your codebase.\nKeep in mind that many licenses treat code reuse and dynamic linking to compiled binaries differently (dynamic linking is the practice of calling external software during runtime while only being aware of the programmatic interface when writing your programs). For example, one may release a proprietary program that links against an LGPL-3.0 library as long as they do not actually redistribute the latter themselves - their program’s users need to install that separately in their system.\n\n\nStrongly-reciprocal licenses\nExamples: GPL-3.0 and GPL-2.0.\nIf you license your project under this type of licence and somebody distributes software that uses your code and combines it with theirs, they need to release the sources of both your code (modified or not) and their code under the same license.\nThe vision of the creators of the GPL was to generate an ever-growing body of free software by forcing/inviting users of your code to release theirs as well. It is thus often referred to as a “viral” license.",
+    "text": "Due diligence is a legal term describing the process of compliance and risk analysis. In the context of open source, the term is often used in a broader sense, to also consider risks to an organisation’s reputation and liability.\nAt CERTH, due diligence should be performed before open-sourcing a project and revisited as the project evolves.\nThe features of a due diligence analysis depend heavily on the nature of the project, but may include:\n\nIdentifying the authors of the project in order to ascertain the copyright holders.\nDetermining the use and risk of dependencies, to prevent, for instance, the use of unmaintained or otherwise unwanted dependencies for reasons such as licence incompatibility.\nAssessing the security and reputational risks associated with the project, to prevent, for instance, the creation of new attack vectors and their public coverage.\nClearing potential liability concerns, for instance export controls, dual-use concerns, or regulated application domains.\nReviewing the code / design, to prevent, for instance, reputational damage due to publishing something of inadequate quality.\n\nDue diligence features evolve through the lifetime of a project and should be re-assessed on a regular basis.",
     "crumbs": [
       "Technical Documentation",
       "Key Concepts",
-      "Licensing"
+      "Due Diligence"
+    ]
+  },
+  {
+    "objectID": "docs/submit-software.html",
+    "href": "docs/submit-software.html",
+    "title": "Submit Your Software",
+    "section": "",
+    "text": "The CERTH OSPO maintains a catalogue of open-source software projects developed at CERTH. If you have a project you would like to include, submit it using the form below. Submissions are manually reviewed by the OSPO team before being added to the catalogue.",
+    "crumbs": [
+      "Technical Documentation",
+      "Submit Software",
+      "Submit Your Software"
+    ]
+  },
+  {
+    "objectID": "docs/submit-software.html#how-it-works",
+    "href": "docs/submit-software.html#how-it-works",
+    "title": "Submit Your Software",
+    "section": "How It Works",
+    "text": "How It Works\n\nFill in the form: provide basic information about your project.\nManual review: the OSPO team reviews the submission to verify it meets the minimum requirements for open-source publication.\nCatalogue integration: approved projects are added to the CERTH software catalogue.",
+    "crumbs": [
+      "Technical Documentation",
+      "Submit Software",
+      "Submit Your Software"
+    ]
+  },
+  {
+    "objectID": "docs/submit-software.html#submit",
+    "href": "docs/submit-software.html#submit",
+    "title": "Submit Your Software",
+    "section": "Submit",
+    "text": "Submit\n\n  Loading form...\n\nIf the form does not load, open it directly: Submit Software Form",
+    "crumbs": [
+      "Technical Documentation",
+      "Submit Software",
+      "Submit Your Software"
     ]
   },
   {
