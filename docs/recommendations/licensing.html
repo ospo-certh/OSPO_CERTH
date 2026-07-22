@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Licensing – Open Source Program Office | CERTH</title>
+<title>Copyright and Licensing – Open Source Program Office | CERTH</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Licensing</h1>
+          <h1 class="quarto-secondary-nav-title">Copyright and Licensing</h1>
         </a>     
     </div>
   </nav>
@@ -235,14 +235,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/recommendations/copyright.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Copyright</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../docs/recommendations/licensing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Licensing</span></a>
+ <span class="menu-text">Copyright and Licensing</span></a>
   </div>
 </li>
       </ul>
@@ -287,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Licensing</h1>
+<h1 class="title d-none d-lg-block">Copyright and Licensing</h1>
 </div>
 
 
@@ -353,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>When combining components, for example by reusing/forking and modifying the code of others license compatibility must be verified before releasing the result. This is part of your due diligence (see <a href="../../docs/key-concepts/due-diligence.html">Key concepts: Due diligence</a>). A common compatibility matrix is shown below, where do note that reused code <strong>must</strong> maintain the original license, for example while accompanied by the exact original license file.</p>
+<p>When combining components, for example by reusing/forking and modifying the code of others license compatibility must be verified before releasing the result. This is part of your due diligence (see <a href="../../docs/key-concepts/due-diligence.html">Key concepts: Due diligence</a>). A common compatibility matrix is shown below. Note that reused code <strong>must</strong> maintain the original license, for example by being accompanied by the exact original license file.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -413,7 +407,7 @@ Warning
 <section id="option-1-add-license-in-code-comments" class="level2">
 <h2 class="anchored" data-anchor-id="option-1-add-license-in-code-comments">Option 1: Add license in code comments</h2>
 <p>The two most recognized ways of applying licenses are either as code comments or by including license files in the source code directory and appropriately marking your files. The legal text that should go into those files or comments is different by license but typically requires manually filling out the copyright holder, which is CERTH, and year, which is the year of the code’s first public release.</p>
-<p>Comment-based licensing requires less book-keeping for small projects. It can thus serve as starting point until the project grows in size, in which case you can move to the option of adding license files, as described next. A Python file licensed under Apache-2.0 may look like this:</p>
+<p>Comment-based licensing requires less book-keeping for small projects. It can thus serve as a starting point until the project grows in size, in which case you can move to the option of adding license files, as described next. A Python file licensed under Apache-2.0 may look like this:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copyright 2026 Centre for Research and Technology Hellas (CERTH)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Licensed under the Apache License, Version 2.0 (the "License");</span></span>
@@ -440,7 +434,7 @@ Warning
 <p><strong>Example:</strong></p>
 <pre class="text"><code>SPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)
 SPDX-FileCopyrightText: 2025 Contributor Name, Affiliation</code></pre>
-<p>The notice by itself does not yet link to a license. This is done by also including the license notice using an appropriate <a href="https://spdx.org/licenses/">SPDX identifier</a>. Do note that the license notice is also not sufficient for meeting all legal licensing requirements; you should also add the used license in the <code>LICENSE/</code> directory.</p>
+<p>The notice by itself does not yet link to a license. This is done by also including the license notice using an appropriate <a href="https://spdx.org/licenses/">SPDX identifier</a>. Do note that the license notice is also not sufficient for meeting all legal licensing requirements; you should also add the used license in the <code>LICENSES/</code> directory.</p>
 <p><strong>Format:</strong></p>
 <pre class="text"><code>SPDX-License-Identifier: &lt;SPDX-identifier&gt;</code></pre>
 <p><strong>Complete example for an Apache-2.0-licensed Python source file:</strong></p>
@@ -572,7 +566,7 @@ my-asset.svg.license  ← contains the SPDX tags</code></pre>
     }
   }
 
-  setActive(homeLink,    !onDocs && !onContact);
+  setActive(homeLink,    !onDocs && !onContact && !onSoftware);
   setActive(docsLink,    onDocs);
   setActive(contactLink, onContact);
   setActive(softwareLink, onSoftware);

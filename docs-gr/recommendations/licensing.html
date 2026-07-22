@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Αδειοδότηση – Open Source Program Office | CERTH</title>
+<title>Πνευματικά Δικαιώματα και Αδειοδότηση – Open Source Program Office | CERTH</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -137,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Αδειοδότηση</h1>
+          <h1 class="quarto-secondary-nav-title">Πνευματικά Δικαιώματα και Αδειοδότηση</h1>
         </a>     
     </div>
   </nav>
@@ -200,14 +235,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs-gr/recommendations/copyright.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Πνευματικά Δικαιώματα</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../docs-gr/recommendations/licensing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Αδειοδότηση</span></a>
+ <span class="menu-text">Πνευματικά Δικαιώματα και Αδειοδότηση</span></a>
   </div>
 </li>
       </ul>
@@ -240,8 +269,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#επισκόπηση" id="toc-επισκόπηση" class="nav-link active" data-scroll-target="#επισκόπηση">Επισκόπηση</a></li>
-  <li><a href="#αδειοδότηση-λογισμικού" id="toc-αδειοδότηση-λογισμικού" class="nav-link" data-scroll-target="#αδειοδότηση-λογισμικού">Αδειοδότηση Λογισμικού</a></li>
-  <li><a href="#συμβατότητα-αδειών" id="toc-συμβατότητα-αδειών" class="nav-link" data-scroll-target="#συμβατότητα-αδειών">Συμβατότητα Αδειών</a></li>
+  <li><a href="#συμβατότητα-αδειών-χρήσης" id="toc-συμβατότητα-αδειών-χρήσης" class="nav-link" data-scroll-target="#συμβατότητα-αδειών-χρήσης">Συμβατότητα αδειών χρήσης</a></li>
+  <li><a href="#επιλογή-1-προσθήκη-άδειας-σε-σχόλια-κώδικα" id="toc-επιλογή-1-προσθήκη-άδειας-σε-σχόλια-κώδικα" class="nav-link" data-scroll-target="#επιλογή-1-προσθήκη-άδειας-σε-σχόλια-κώδικα">Επιλογή 1: Προσθήκη άδειας σε σχόλια κώδικα</a></li>
+  <li><a href="#επιλογή-2-προσθήκη-αρχείων-άδειας" id="toc-επιλογή-2-προσθήκη-αρχείων-άδειας" class="nav-link" data-scroll-target="#επιλογή-2-προσθήκη-αρχείων-άδειας">Επιλογή 2: Προσθήκη αρχείων άδειας</a></li>
+  <li><a href="#τοποθέτηση-εντός-πηγαίου-κώδικα" id="toc-τοποθέτηση-εντός-πηγαίου-κώδικα" class="nav-link" data-scroll-target="#τοποθέτηση-εντός-πηγαίου-κώδικα">Τοποθέτηση εντός πηγαίου κώδικα</a></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Αδειοδότηση</h1>
+<h1 class="title d-none d-lg-block">Πνευματικά Δικαιώματα και Αδειοδότηση</h1>
 </div>
 
 
@@ -269,17 +300,17 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="επισκόπηση" class="level2">
 <h2 class="anchored" data-anchor-id="επισκόπηση">Επισκόπηση</h2>
-<p>Οι δεσμεύσεις Ανοιχτής Επιστήμης του ΕΚΕΤΑ, εναρμονισμένες με τον <a href="https://eosc.eu/">Ευρωπαϊκό Χώρο Ανοιχτής Επιστήμης (EOSC)</a> και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, όπου αυτό είναι δυνατό.</p>
-<p>Η επιλογή άδειας πρέπει να περιλαμβάνει διαβούλευση με το OSPO ΕΚΕΤΑ. Κατά την επιλογή άδειας, λάβετε υπόψη:</p>
+<p>Οι δεσμεύσεις του ΕΚΕΤΑ για Ανοιχτή Επιστήμη, ευθυγραμμισμένες με το <a href="https://eosc.eu/">European Open Science Cloud (EOSC)</a> και τις απαιτήσεις του Horizon Europe, ενθαρρύνουν τη διάθεση του λογισμικού που αναπτύσσεται στο πλαίσιο δημόσια χρηματοδοτούμενης έρευνας ως ανοιχτού κώδικα, εφόσον αυτό είναι δυνατό. Η επιλογή άδειας χρήσης θα πρέπει να γίνεται σε συνεννόηση με το OSPO του ΕΚΕΤΑ και να λαμβάνει υπόψη:</p>
 <ul>
-<li><strong>Κοινοτικές νόρμες</strong> στο οικοσύστημά σας</li>
-<li><strong>Ποιο καθεστώς διανομής</strong> (permissive, weakly-reciprocal, or strongly-reciprocal) ευθυγραμμίζεται με τους στόχους του έργου σας (βλ. <a href="../../docs-gr/key-concepts/licensing.html">Βασικές έννοιες: Αδειοδότηση</a>)</li>
-<li><strong>Υποχρεώσεις που επιβάλλει ο χρηματοδότης</strong> σας ή η συμφωνία κοινοπραξίας</li>
+<li><strong>Εξαρτήσεις (dependencies)</strong> που έχετε χρησιμοποιήσει στο έργο σας.</li>
+<li><strong>Συνήθεις πρακτικές</strong> του πεδίου εφαρμογής.</li>
+<li><strong>Ποιο καθεστώς διάθεσης</strong> του κώδικα (επιτρεπτικό, ασθενώς αμοιβαίο, ή ισχυρά αμοιβαίο) ταιριάζει με τους στόχους του έργου λογισμικού σας (βλ. <a href="../../docs-gr/key-concepts/licensing.html">Βασικές έννοιες: Αδειοδότηση</a>).</li>
+<li><strong>Υποχρεώσεις που επιβάλλονται από τον φορέα χρηματοδότησης</strong> ή τη συμφωνία κοινοπραξίας.</li>
 </ul>
 </section>
-<section id="αδειοδότηση-λογισμικού" class="level2">
-<h2 class="anchored" data-anchor-id="αδειοδότηση-λογισμικού">Αδειοδότηση Λογισμικού</h2>
-<p>Χρησιμοποιήστε άδεια εγκεκριμένη από το <a href="https://opensource.org/licenses">Open Source Initiative (OSI)</a> για λογισμικό με πνευματικά δικαιώματα ΕΚΕΤΑ. Συνηθισμένες επιλογές:</p>
+<section id="συμβατότητα-αδειών-χρήσης" class="level2">
+<h2 class="anchored" data-anchor-id="συμβατότητα-αδειών-χρήσης">Συμβατότητα αδειών χρήσης</h2>
+<p>Χρησιμοποιήστε άδειες εγκεκριμένες από το <a href="https://opensource.org/licenses">Open Source Initiative (OSI)</a> για λογισμικό με πνευματικά δικαιώματα του ΕΚΕΤΑ. Παρακάτω παρουσιάζονται τυπικές επιλογές.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -290,37 +321,33 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th>Άδεια</th>
 <th>Τύπος</th>
-<th>Τυπική περίπτωση χρήσης</th>
+<th>Τυπική χρήση</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Apache-2.0</td>
-<td>Permissive</td>
-<td>Γενικό λογισμικό· μέγιστη υιοθέτηση· περιλαμβάνει εκχώρηση διπλωμάτων ευρεσιτεχνίας</td>
+<td>Επιτρεπτική</td>
+<td>Γενικό λογισμικό· μέγιστη υιοθέτηση· περιλαμβάνει παραχώρηση διπλωμάτων ευρεσιτεχνίας</td>
 </tr>
 <tr class="even">
 <td>MIT</td>
-<td>Permissive</td>
-<td>Μικρά βοηθητικά προγράμματα και βιβλιοθήκες· ελάχιστες απαιτήσεις</td>
+<td>Επιτρεπτική</td>
+<td>Μικρά εργαλεία και βιβλιοθήκες· ελάχιστες απαιτήσεις</td>
 </tr>
 <tr class="odd">
 <td>GPL-3.0</td>
-<td>Strongly reciprocal</td>
-<td>Εργαλεία όπου όλα τα παράγωγα πρέπει να παραμείνουν ανοιχτού κώδικα</td>
+<td>Ισχυρά αμοιβαία</td>
+<td>Εργαλεία όπου όλα τα παράγωγα πρέπει να παραμένουν ανοιχτού κώδικα</td>
 </tr>
 <tr class="even">
 <td>LGPL-3.0</td>
-<td>Weakly reciprocal</td>
-<td>Βιβλιοθήκες που προορίζονται για σύνδεση από ιδιόκτητο λογισμικό</td>
+<td>Ασθενώς αμοιβαία</td>
+<td>Βιβλιοθήκες που προορίζονται να συνδέονται με ιδιόκτητο λογισμικό</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="συμβατότητα-αδειών" class="level2">
-<h2 class="anchored" data-anchor-id="συμβατότητα-αδειών">Συμβατότητα Αδειών</h2>
-<p>Κατά τον συνδυασμό στοιχείων υπό διαφορετικές άδειες, πρέπει να επαληθεύεται η συμβατότητα πριν από την κυκλοφορία. Αυτό αποτελεί μέρος της δέουσας επιμέλειας (βλ. <a href="../../docs-gr/key-concepts/due-diligence.html">Βασικές έννοιες: Δέουσα Επιμέλεια</a>).</p>
-<p>Ένας συνηθισμένος πίνακας συμβατότητας:</p>
+<p>Όταν συνδυάζετε κώδικα, για παράδειγμα επαναχρησιμοποιώντας/κάνοντας fork και τροποποιώντας κώδικα τρίτων, η συμβατότητα των χρησιμοποιούμενων αδειών πρέπει να επαληθεύεται πριν από τη διάθεση του αποτελέσματος. Αυτό αποτελεί μέρος της δέουσας επιμέλειας (βλ. <a href="../../docs-gr/key-concepts/due-diligence.html">Βασικές έννοιες: Δέουσα Επιμέλεια</a>). Παρακάτω παρέχεται ένας συνήθης πίνακας συμβατότητας, όπου ο επαναχρησιμοποιούμενος κώδικας <strong>πρέπει</strong> να διατηρεί την αρχική άδεια, για παράδειγμα συνοδευόμενος από το ακριβές αρχικό αρχείο της.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -351,8 +378,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Κώδικα GPL-3.0</td>
-<td>Μόνο εάν το έργο σας είναι επίσης GPL-3.0</td>
-<td>Μόνο εάν το έργο σας είναι επίσης GPL-3.0</td>
+<td>Μόνο αν το έργο σας είναι επίσης GPL-3.0</td>
+<td>Μόνο αν το έργο σας είναι επίσης GPL-3.0</td>
 <td>✓</td>
 </tr>
 <tr class="even">
@@ -363,6 +390,69 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Δεν επαρκεί να αναφέρετε απλώς την επιθυμητή άδεια σε ένα αρχείο README. Πρέπει να συμπεριλάβετε πραγματικά το κείμενό της.</strong></p>
+</div>
+</div>
+</section>
+<section id="επιλογή-1-προσθήκη-άδειας-σε-σχόλια-κώδικα" class="level2">
+<h2 class="anchored" data-anchor-id="επιλογή-1-προσθήκη-άδειας-σε-σχόλια-κώδικα">Επιλογή 1: Προσθήκη άδειας σε σχόλια κώδικα</h2>
+<p>Οι δύο πιο αναγνωρισμένοι τρόποι εφαρμογής αδειών χρήσης κώδικα είναι ως σχόλια εντός του κώδικα και ως αρχείων άδειας στον φάκελο του πηγαίου κώδικα, συνοδευόμενη από την παράλληλη σήμανση του κώδικα. Το νομικό κείμενο των αρχείων ή σχολίων διαφέρει ανά άδεια, και συχνά απαιτεί χειροκίνητη συμπλήρωση του κατόχου των πνευματικών δικαιωμάτων, που είναι το ΕΚΕΤΑ (CERTH), και του έτους, που είναι το έτος της πρώτης δημόσιας κυκλοφορίας του κώδικα.</p>
+<p>Η αδειοδότηση με σχόλια είναι ευκολότερη σε μικρά έργα. Μπορεί έτσι να χρησιμεύσει ως αφετηρία, και όταν το έργο επεκταθεί να μεταβεί στην πρακτική της προσθήκης αρχείων άδειας, όπως περιγράφεται παρακάτω. Παρατίθεται ένα αρχείο Python με άδεια Apache-2.0:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copyright 2026 Centre for Research and Technology Hellas (CERTH)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Licensed under the Apache License, Version 2.0 (the "License");</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># you may not use this file except in compliance with the License.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># You may obtain a copy of the License at</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     http://www.apache.org/licenses/LICENSE-2.0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Unless required by applicable law or agreed to in writing, software</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># distributed under the License is distributed on an "AS IS" BASIS,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># See the License for the specific language governing permissions and</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># limitations under the License.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"the CERTH OSPO"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello from </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="επιλογή-2-προσθήκη-αρχείων-άδειας" class="level2">
+<h2 class="anchored" data-anchor-id="επιλογή-2-προσθήκη-αρχείων-άδειας">Επιλογή 2: Προσθήκη αρχείων άδειας</h2>
+<p>Σε μεγαλύτερα έργα λογισμικού (π.χ. με &gt;30 αρχεία), μπορείτε να συγκεντρώσετε τις πληροφορίες αδειοδότησης σε έναν φάκελο. Παλαιότερες πρακτικές συνόδευαν αυτόν τον φάκελο με κείμενο για το ποιες άδειες ισχύουν σε ποια αρχεία ή τμήματα κώδικα. Ωστόσο, συνιστούμε το <a href="https://reuse.software/">πρότυπο REUSE</a>, το οποίο υποστηρίζεται επίσης από το Free Software Foundation Europe (FSFE) και υιοθετείται ευρέως σε Ευρωπαϊκά έργα ανοιχτού κώδικα όπως ο <a href="https://github.com/torvalds/linux">πυρήνας Linux</a>.</p>
+<p>Αυτό το πρότυπο απαιτεί επίσης τη συγκέντρωση όλων των εφαρμοστέων αδειών σε έναν φάκελο <code>LICENSES/</code> στον πηγαίο κώδικα. Κάθε άδεια θα πρέπει να περιλαμβάνει το <strong>πλήρες κείμενό της</strong> (π.χ. <code>LICENSES/Apache-2.0.txt</code>). Στη συνέχεια, σε κάθε αρχείο πηγαίου κώδικα, μια σημείωση πνευματικών δικαιωμάτων καθορίζει συνοπτικά τα πνευματικά δικαιώματα και το χρονικό πλαίσιο ανάπτυξής του. Όπως έχει ήδη αναφερθεί, αρκεί να αναφερθεί μόνο το αρχικό έτος δημιουργίας. Επόμενα έτη ή εύρη δεν είναι απαραίτητα, εκτός αν το αρχείο έχει τροποποιηθεί ουσιωδώς από διαφορετικό συνεισφέροντα, οπότε μπορούν να προστεθούν επιπλέον γραμμές:</p>
+<p><strong>Μορφή:</strong></p>
+<pre class="text"><code>SPDX-FileCopyrightText: &lt;year&gt; &lt;copyright holder&gt;</code></pre>
+<p><strong>Παράδειγμα:</strong></p>
+<pre class="text"><code>SPDX-FileCopyrightText: 2024 Centre for Research and Technology Hellas (CERTH)
+SPDX-FileCopyrightText: 2025 Contributor Name, Affiliation</code></pre>
+<p>Η σημείωση από μόνη της δεν συνδέεται ακόμα με κάποια άδεια. Αυτό γίνεται με τη συμπερίληψη της άδειας μέσω κατάλληλου <a href="https://spdx.org/licenses/">SPDX identifier</a>. Τονίζεται ότι η σημείωση άδειας επίσης δεν αρκεί από μόνη της για την κάλυψη όλων των νομικών απαιτήσεων αδειοδότησης, και θα πρέπει επίσης να περιλαμβάνεται το νομικό κείμενο της άδειας στον φάκελο <code>LICENSES/</code>.</p>
+<p><strong>Μορφή:</strong></p>
+<pre class="text"><code>SPDX-License-Identifier: &lt;SPDX-identifier&gt;</code></pre>
+<p><strong>Πλήρες παράδειγμα για αρχείο πηγαίου κώδικα Python αδειοδοτημένο υπό Apache-2.0:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2026 Centre for Research and Technology Hellas (CERTH)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="an">SPDX-License-Identifier:</span><span class="co"> Apache-2.0</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"the CERTH OSPO"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello from </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Αυτή η μηχανικά αναγνώσιμη μορφή επιτρέπει αυτοματοποιημένη επαλήθευση των αδειών χρήσης από εργαλεία όπως το <code>reuse lint</code>. Για παράδειγμα, ελέγξτε ότι όλα τα αρχεία σας έχουν σημανθεί σωστά με πνευματικά δικαιώματα και άδεια, εγκαθιστώντας το πακέτο <code>reuse</code> στο εικονικό σας περιβάλλον Python. Το OSPO του ΕΚΕΤΑ μπορεί να βοηθήσει με την αρχική ρύθμιση και την ερμηνεία των αποτελεσμάτων.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install reuse</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> lint</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="τοποθέτηση-εντός-πηγαίου-κώδικα" class="level2">
+<h2 class="anchored" data-anchor-id="τοποθέτηση-εντός-πηγαίου-κώδικα">Τοποθέτηση εντός πηγαίου κώδικα</h2>
+<p>Τοποθετήστε τις ετικέτες SPDX ή τα σχόλια άδειας σε ένα μπλοκ σχολίων στην αρχή κάθε αρχείου πηγαίου κώδικα, πριν από οποιοδήποτε άλλο περιεχόμενο, ακόμη και από εισαγωγές (imports) ή δηλώσεις πακέτων. Για μορφές αρχείων που δεν υποστηρίζουν ενσωματωμένα σχόλια (π.χ. εικόνες, δυαδικά στοιχεία, ή δεδομένα που διανέμονται με το λογισμικό), χρησιμοποιήστε ένα συνοδευτικό αρχείο <code>.license</code> με το ίδιο βασικό όνομα:</p>
+<pre class="text"><code>my-asset.svg          ← το στοιχείο
+my-asset.svg.license  ← περιέχει τις ετικέτες SPDX</code></pre>
+<p>Αν έχετε τέτοια αρχεία που δεν μπορούν να φέρουν ενσωματωμένες σημειώσεις και χρησιμοποιείτε το REUSE specification, πρέπει να δηλώσετε ποια είναι αυτά με ένα αρχείο <code>REUSE.toml</code> (παλαιότερα <code>.reuse/dep5</code>). Αυτό τοποθετείται στη ρίζα του έργου σας και αντιστοιχίζει αδόμητα αρχεία στις πληροφορίες πνευματικών δικαιωμάτων και άδειας τους.</p>
 
 
 </section>
@@ -476,7 +566,7 @@ ul.task-list li input[type="checkbox"] {
     }
   }
 
-  setActive(homeLink,    !onDocs && !onContact);
+  setActive(homeLink,    !onDocs && !onContact && !onSoftware);
   setActive(docsLink,    onDocs);
   setActive(contactLink, onContact);
   setActive(softwareLink, onSoftware);
